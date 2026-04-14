@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>2</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-left">
+      <ul>
+        <li class="menu-item has-dropdown">
+          <a href="#">Chci koupit</a>
+          <div class="dropdown">
+            <a href="#">Byty</a>
+            <a href="#">Domy</a>
+            <a href="#">Chaty a chalupy</a>
+            <a href="#">Zahrady, rekreace</a>
+            <a href="#">Pole</a>
+            <a href="#">Lesy</a>
+            <a href="#">Stavební pozemky</a>
+            <a href="#">Spekulační pozemky</a>
+            <a href="#">Ostatní stavby</a>
+          </div>
+        </li>
+        <li class="menu-item">
+          <a href="#">Chci prodat</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Vložit inzerát</a>
+        </li>
+        <li class="menu-item">
+          <a href="#">Služby</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="header-logo" href="#">
+      <img src="../viagem-logo.svg" alt="Realitní portál VIAGEM" />
+    </a>
+
+    <div class="nav-right-block">
+      <nav class="nav-right">
+        <ul>
+          <li class="menu-item has-dropdown">
+            <a href="#">O nás</a>
+            <div class="dropdown">
+              <a href="#">Kariéra</a>
+              <a href="#">Kontakt</a>
+            </div>
+          </li>
+          <li class="menu-item">
+            <a href="#">Podnikatelské úvěry</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Zpětný odkup</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <div class="button sign-in">
+          <a href="/prihlaseni">Přihlášení</a>
+        </div>
+        <div class="lang-icon"><img src="../globe.svg" alt="Switch language" div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-subtitle">Realitní portál</p>
+        <h1>Najděte Lorem, ipsum.</h1>
+        <p class="hero-desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+
+        <div class="search-wizard">
+          <div class="wizard-steps">
+            <button class="wizard-btn active" data-target="buy">
+              Chci koupit
+            </button>
+            <button class="wizard-btn" data-target="sell">Chci prodat</button>
+
+          </div>
+
+          <div class="wizard-forms-container">
+            <div id="form-buy" class="wizard-panel active">
+              <div class="search-row">
+                <div class="search-input">
+                  <input type="text" placeholder="Zadejte město, adresu nebo lokalitu..." />
+                </div>
+                <div class="custom-multi-select" id="multiSelectContainer">
+                  <div class="multi-select-trigger" id="typeTrigger">
+                    <span>Typ nemovitosti</span>
+                    <span class="arrow">˅</span>
+                  </div>
+                  <div class="multi-select-dropdown" id="typeDropdown">
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Stavební, bydlení a komerční">
+                      <span class="icon"><img src="../images/terms/term-1-color.svg" alt=""></span>
+                      <span class="chip-label">Stavební &amp; komerční</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Zahrady, rekreace">
+                      <span class="icon"><img src="../images/terms/term-2-color.svg" alt=""></span>
+                      <span class="chip-label">Zahrady &amp; rekreace</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Investiční pozemky">
+                      <span class="icon"><img src="../images/terms/term-3-color.svg" alt=""></span>
+                      <span class="chip-label">Investiční pozemky</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Pole">
+                      <span class="icon"><img src="../images/terms/term-4-color.svg" alt=""></span>
+                      <span class="chip-label">Pole</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Lesy">
+                      <span class="icon"><img src="../images/terms/term-5-color.svg" alt=""></span>
+                      <span class="chip-label">Lesy</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Spekulační pozemky">
+                      <span class="icon"><img src="../images/terms/term-6-color.svg" alt=""></span>
+                      <span class="chip-label">Spekulační pozemky</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Byty, domy, chaty a chalupy">
+                      <span class="icon"><img src="../images/terms/term-7-color.svg" alt=""></span>
+                      <span class="chip-label">Byty, domy, chaty a chalupy</span>
+                    </label>
+                    <label class="icon-chip">
+                      <input type="checkbox" value="Ostatní stavby">
+                      <span class="icon"><img src="../images/terms/term-10-color.svg" alt=""></span>
+                      <span class="chip-label">Ostatní stavby</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="search-radius">
+                  <input type="number" class="radius-input" placeholder="Okolí" min="0" />
+                  <span class="radius-unit">km</span>
+                </div>
+                <button class="search-btn button">Hledat</button>
+              </div>
+              <div class="search-footer">
+                <div class="search-tags">
+                  <span>Praha</span>
+                  <span>Brno</span>
+                  <span>Ostrava</span>
+                  <span>Plzeň</span>
+                  <span>Liberec</span>
+                </div>
+                <button class="add-location-btn">+ Přidat lokalitu</button>
+              </div>
+            </div>
+
+            <div id="form-sell" class="wizard-panel">
+              <div class="content-section float-in">
+                <div class="half contact-form-outer">
+                  <a class="anchor" id="anchor-lead"></a>
+                  <div class="content-section form form-lead">
+                    <form class="float-in" id="form-lead" method="post"
+                      action="https://www.viagem.cz/prodej-nemovitosti#anchor-lead">
+
+                      <div class="form-field-row form-field-text" id="field-formName">
+                        <label for="formName">Jméno a příjmení</label>
+                        <input type="text" name="formName" id="formName" class="input-text" value="">
+                      </div>
+
+                      <div class="form-field-row form-field-email" id="field-formEmail">
+                        <label for="formEmail">E-mail</label>
+                        <input type="text" name="formEmail" id="formEmail" class="input-email" value="">
+                      </div>
+
+                      <div class="form-field-row form-field-phone" id="field-formPhone">
+                        <label for="formPhone">Telefon</label>
+                        <input type="text" name="formPhone" id="formPhone" class="input-phone" value="">
+                      </div>
+                      <div class="form-field-row form-field-text" id="field-leadSpam">
+                        <label for="leadSpam">Jaký je rok? <span class="red">*</span></label>
+                        <input type="text" name="leadSpam" id="leadSpam" class="input-text input-short" value="">
+                      </div>
+
+                      <div class="form-field-row form-field-textarea" id="field-formMessage">
+                        <label for="formMessage">Zpráva</label>
+                        <textarea name="formMessage" id="formMessage" class="input-textarea"></textarea>
+                      </div>
+
+
+                      <div class="form-field-row form-field-checkbox" id="field-leadTerms">
+                        <input type="checkbox" name="leadTerms" id="leadTerms" class="input-checkbox" value="true">
+                        <label for="leadTerms">Souhlasím s Podmínkami zpracování osobních údajů. <span
+                            class="red">*</span></label>
+                        <div class="form-description form-description-checkbox">
+                          <div class="form-description-link">
+                            <a href="https://www.viagem.cz/gdpr">Zpracování osobních údajů</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <input type="submit" name="leadSubmit" value="Odeslat">
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="listings-section">
+      <div class="listings-header">
+        <h2>Top reality na prodej</h2>
+        <p class="listings-subtitle">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </div>
+
+      <div class="listings-track">
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 5</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">632 413 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Pole 11 283 m²</div>
+            <div class="listing-location">
+              okres Praha-západ, Mníšek pod Brdy
+            </div>
+            <div class="listing-meta">11 283 m² &nbsp;·&nbsp; 56,1 Kč/m²</div>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 3</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">1 450 000 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Les 25 000 m²</div>
+            <div class="listing-location">okres Kladno, Unhošť</div>
+            <div class="listing-meta">25 000 m² &nbsp;·&nbsp; 58 Kč/m²</div>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 8</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">890 000 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Stavební pozemek 800 m²</div>
+            <div class="listing-location">okres Beroun, Králův Dvůr</div>
+            <div class="listing-meta">800 m² &nbsp;·&nbsp; 1 112 Kč/m²</div>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 2</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">3 200 000 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Zahrada a chatka</div>
+            <div class="listing-location">Praha 6, Suchdol</div>
+            <div class="listing-meta">450 m² &nbsp;·&nbsp; 7 111 Kč/m²</div>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 4</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">450 000 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Orná půda 5 500 m²</div>
+            <div class="listing-location">okres Mělník, Neratovice</div>
+            <div class="listing-meta">5 500 m² &nbsp;·&nbsp; 81 Kč/m²</div>
+          </div>
+        </div>
+
+        <div class="listing-card">
+          <div class="listing-img-wrap has-gallery">
+            <div class="gallery-counter">1 / 6</div>
+            <button class="gallery-arrow prev-arrow">❮</button>
+            <button class="gallery-arrow next-arrow">❯</button>
+            <img src="../images/viagem-thumbnail.jpg?v=2" alt="Pole" />
+          </div>
+          <div class="listing-body">
+            <div class="listing-price-row">
+              <span class="listing-price">2 100 000 Kč</span>
+              <button class="btn-compare-logic" onclick="toggleCompare(this)">
+                <span class="compare-icon">+</span> Srovnat
+              </button>
+            </div>
+            <div class="listing-name">Spekulační pozemek</div>
+            <div class="listing-location">okres Praha-východ, Říčany</div>
+            <div class="listing-meta">10 000 m² &nbsp;·&nbsp; 210 Kč/m²</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section">
+      <h2 class="service-title">Prodáváte či kupujete nemovitost?</h2>
+      <div class="service-block">
+        <div class="service-card">
+          <div class="icon-service">
+            <img src="../images/icons/icon-hand-money.svg" alt="Výkup nemovitostí" />
+          </div>
+          <h3>Výkup nemovitostí</h3>
+          <p class="description-service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolore
+            veritatis, qui recusandae officiis officia eveniet possimus sequi ducimus nesciunt quaerat
+            inventore
+            beatae assumenda fuga numquam nostrum vitae distinctio. Animi.
+          </p>
+          <button class="service-btn">Chci prodat</button>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-service">
+            <img src="../images/icons/icon-cart.svg" alt="Nemovitosti na prodej" />
+          </div>
+          <h3>Nemovitosti na prodej</h3>
+          <p class="description-service">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolore
+            veritatis, qui recusandae officiis officia eveniet possimus sequi ducimus nesciunt quaerat
+            inventore
+            beatae assumenda fuga numquam nostrum vitae distinctio. Animi.</p>
+
+          </p>
+          <button class="service-btn">Chci koupit</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="upper-footer">
+      <div class="company-info">
+        <a class="header-logo" href="http://localhost:8080">
+
+          <img src="../images//viagem-logo.svg" class="icon" alt="Realitní portál VIAGEM" />
+
+        </a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga iusto dolores fugit, maiores quasi
+          libero
+          tempora facere, iste, molestiae ipsam debitis. Eum suscipit voluptatum esse iusto sunt consequatur,
+          facilis assumenda? </p>
+      </div>
+
+      <div class="prefoot prefoot-terms">
+        <h2 class="prefoot-title">Nemovitosti</h2>
+        <div class="prefoot-content float-in">
+          <div class="menu terms-menu">
+            <ul>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=1">Stavební, bydlení a
+                  komerční</a></li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=2">Zahrady,
+                  rekreace</a></li>
+              <li class="menu-item current-menu-item"><a
+                  href="http://localhost:8080/nemovitosti-na-prodej?terms=3">Investiční pozemky</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=4">Pole</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=5">Lesy</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=6">Spekulační pozemky</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=7">Byty</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=8">Domy</a>
+              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=9">Chaty a
+                  chalupy</a></li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=10">Ostatní
+                  stavby</a></li>
+            </ul>
+          </div>
+
+          <div class="prefoot-icons">
+            <div class="menu-icons">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h2>Společnost</h2>
+        <a href="http://localhost:8080/o-nas">O nás</a>
+        <a href="http://localhost:8080/kariera">Kariéra</a>
+        <a href="http://localhost:8080/kontakt">Kontakt</a>
+        <a href="#">Adresář realitních kanceláří</a>
+        <a href="#">Firemní profil</a>
+      </div>
+
+      <div class="prefoot prefoot-contacts">
+        <h2 class="prefoot-title">Rychlý kontakt</h2>
+        <div class="prefoot-content">
+          <div class="prefoot-contact-items bold">
+            <div class="contact-item contact-phone"><a id="phone_1-prefooter" href="tel:1200">1200</a>
+            </div>
+            <div class="contact-item contact-email"><a id="email_contact-prefooter" class="email-encoded"
+                href="mailto:info@viagem.cz" data-encoded-first="vasb" data-encoded-second="ivntrz"
+                data-encoded-third="pm"><span class="email-string">info@viagem.cz</span></a></div>
+          </div>
+          <div class="prefoot-address">
+            <strong>Viagem a.s.</strong><br>Sokolovská 131/86 - Zirkon office<br>Praha 186 00<br>IČ:
+            04817320<br>DIČ: CZ04817320
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="middle-footer">
+      <a href="#">Zpracování osobních údajů</a>
+      <a href="#">Obchodní podmínky</a>
+      <a href="http://localhost:8080/podnikatelske-uvery">Podnikatelské úvěry</a>
+      <a href="http://localhost:8080/investice-a-dluhopisy">Investiční sekce</a>
+    </div>
+
+    <div class="bottom-footer">
+      <div class="foot left">© 2026 Viagem a.s.</div>
+      <div class="foot right">
+        <div class="social-networks"><a href="https://www.facebook.com/viagemcz/" target="_blank"><img
+              src="../images/social/facebook.svg" class="icon" alt="Facebook"></a><a
+            href="https://www.instagram.com/viagem.a.s/" target="_blank"><img src="../images/social/instagram.svg"
+              class="icon" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-compare-bar" id="compareBar">
+    <div class="compare-info">
+      <span class="compare-count" id="compareCount">0</span>
+      <span>nemovitosti k porovnání</span>
+    </div>
+    <a href="#" class="btn-go-compare">Přejít k porovnání</a>
+  </div>
+
+  <script>
+    document.querySelectorAll('.wizard-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.wizard-btn').forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+        document.querySelectorAll('.wizard-panel').forEach((panel) => panel.classList.remove('active'));
+        document.getElementById('form-' + button.getAttribute('data-target')).classList.add('active');
+      });
+    });
+
+    let compareCount = 0;
+    function toggleCompare(button) {
+      const bar = document.getElementById('compareBar');
+      const countDisplay = document.getElementById('compareCount');
+      if (button.classList.contains('added')) {
+        button.classList.remove('added');
+        button.innerHTML = '<span class="compare-icon">+</span> Srovnat';
+        compareCount--;
+      } else {
+        button.classList.add('added');
+        button.innerHTML = '<span class="compare-icon">✓</span> Přidáno';
+        compareCount++;
+      }
+      countDisplay.innerText = compareCount;
+      bar.classList.toggle('active', compareCount > 0);
+    }
+
+    const ms = document.getElementById('multiSelectContainer');
+    document.getElementById('typeTrigger').addEventListener('click', (e) => {
+      e.stopPropagation();
+      ms.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!ms.contains(e.target)) ms.classList.remove('open');
+    });
+
+    function updateTriggerLabel() {
+      const selected = [...document.querySelectorAll('.icon-chip input[type="checkbox"]:checked')]
+        .map(cb => cb.closest('.icon-chip').querySelector('.chip-label').textContent.trim());
+      const label = document.querySelector('#typeTrigger span:first-child');
+      if (selected.length === 0) {
+        label.textContent = 'Typ nemovitosti';
+        label.style.color = '#475569';
+      } else if (selected.length === 1) {
+        label.textContent = selected[0];
+        label.style.color = 'var(--primary-accent)';
+      } else {
+        label.textContent = `${selected.length} typy vybrány`;
+        label.style.color = 'var(--primary-accent)';
+      }
+    }
+
+    document.querySelectorAll('.icon-chip input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.icon-chip').classList.toggle('selected', cb.checked);
+        updateTriggerLabel();
+      });
+    });
+  </script>
+</body>
+
+</html>
