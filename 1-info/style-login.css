@@ -1669,6 +1669,67 @@ body {
   line-height: 1.5;
 }
 
+/* ═══ SKUPINY ═══ */
+.skupina-sec {
+  padding-bottom: 0;
+}
+
+.skupina-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skupina-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--blue);
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.skupina-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 32px;
+  color: var(--text);
+}
+
+.skupina-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.skupina-logo-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  min-width: 130px;
+}
+
+.skupina-logo-item:hover {
+  box-shadow: 0 8px 24px rgba(32, 147, 213, 0.12);
+  transform: translateY(-2px);
+}
+
+.skupina-logo-item img {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
 /* ══════════════════════════════════════════════
    CTA BANNER
 ══════════════════════════════════════════════ */
