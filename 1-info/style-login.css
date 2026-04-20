@@ -1671,7 +1671,7 @@ body {
 
 /* ═══ SKUPINY ═══ */
 .skupina-sec {
-  padding-bottom: 0;
+  padding-top: 1rem;
 }
 
 .skupina-inner {
@@ -1684,7 +1684,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--blue);
+  color: var(--accent);
   margin-bottom: 6px;
   text-align: center;
 }
@@ -1725,7 +1725,7 @@ body {
 }
 
 .skupina-logo-item img {
-  height: 34px;
+  height: 54px;
   width: auto;
   object-fit: contain;
 }
