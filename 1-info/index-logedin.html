@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style-login.css" />
+  <link rel="stylesheet" href="responsive.css" />
   <title>1</title>
 </head>
 
@@ -15,7 +16,7 @@
         <img src="../viagem-logo.svg" class="icon" alt="Realitní portál VIAGEM" />
       </a>
 
-      <nav class="site-nav">
+      <nav class="site-nav" id="siteNav">
         <div class="nav-item has-mega" id="nav-koupit">
           <button class="nav-link" onclick="toggleNav('koupit')">
             Koupit
@@ -28,29 +29,18 @@
           <div class="dropdown dropdown--mega dropdown--koupit">
             <div class="mega-inner">
               <div class="dd-search-panel">
-                <h3 class="mega-title-large">
-                  Najděte svou vysněnou nemovitost
-                </h3>
-
+                <h3 class="mega-title-large">Prohlédněte si naši nabídku</h3>
                 <div class="dd-search-field dd-search-field--with-btn">
                   <input type="text" placeholder="Město, adresa nebo lokalita…" class="mega-input-huge" />
-                  <button type="button" class="add-location-btn-dd" id="addLocationBtn">
-                    + Přidat lokalitu
-                  </button>
+                  <button type="button" class="add-location-btn-dd" id="addLocationBtn">+ Přidat lokalitu</button>
                 </div>
                 <div id="extra-locations-dd"></div>
-
-                <div class="search-tags">
-                  <span>Praha</span><span>Brno</span><span>Ostrava</span><span>Plzeň</span><span>Liberec</span>
-                </div>
-
                 <div class="dd-row">
-                  <div class="radius-wrap mega-input-huge" ">
-                    <span >Okolí</span>
-                    <input type=" number" min="0">
+                  <div class="radius-wrap mega-input-huge">
+                    <span>Okolí</span>
+                    <input type="number" min="0">
                     <span>km</span>
                   </div>
-
                   <div class="custom-multi-select" id="multiSelectContainer">
                     <div class="multi-select-trigger mega-input-huge" id="typeTrigger">
                       <span>Typ nemovitosti</span>
@@ -62,82 +52,54 @@
                       </span>
                     </div>
                     <div class="multi-select-dropdown" id="typeDropdown">
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Stavební, bydlení a komerční" />
-                        <span class="icon">
-                          <img src="../images/terms/term-1-color.svg" alt="Stavební a komerční" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-1-color.svg"
+                            alt="Stavební a komerční" /></span>
                         <span class="chip-label">Stavební &amp; komerční</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Zahrady, rekreace" />
-                        <span class="icon">
-                          <img src="../images/terms/term-2-color.svg" alt="Zahrady a rekreace" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-2-color.svg"
+                            alt="Zahrady a rekreace" /></span>
                         <span class="chip-label">Zahrady &amp; rekreace</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Investiční pozemky" />
-                        <span class="icon">
-                          <img src="../images/terms/term-3-color.svg" alt="Investiční pozemky" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-3-color.svg"
+                            alt="Investiční pozemky" /></span>
                         <span class="chip-label">Investiční pozemky</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Pole" />
-                        <span class="icon">
-                          <img src="../images/terms/term-4-color.svg" alt="Pole" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-4-color.svg" alt="Pole" /></span>
                         <span class="chip-label">Pole</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Lesy" />
-                        <span class="icon">
-                          <img src="../images/terms/term-5-color.svg" alt="Lesy" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-5-color.svg" alt="Lesy" /></span>
                         <span class="chip-label">Lesy</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Spekulační pozemky" />
-                        <span class="icon">
-                          <img src="../images/terms/term-6-color.svg" alt="Spekulační pozemky" />
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-6-color.svg"
+                            alt="Spekulační pozemky" /></span>
                         <span class="chip-label">Spekulační pozemky</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Byty, domy, chaty a chalupy" />
-                        <span class="icon">
-                          <img src="../images/terms/term-7-color.svg" alt="Byty a domy" />
-                        </span>
-                        <span class="chip-label">
-                          Byty, domy,<br>chaty a chalupy
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-7-color.svg" alt="Byty a domy" /></span>
+                        <span class="chip-label">Byty, domy,<br>chaty a chalupy</span>
                       </label>
-
                       <label class="icon-chip">
                         <input type="checkbox" value="Ostatní stavby" />
-                        <span class="icon">
-                          <img src="../images/terms/term-10-color.svg" alt="Ostatní stavby" />
-                        </span>
-                        <span class="chip-label">
-                          Ostatní<br>stavby
-                        </span>
+                        <span class="icon"><img src="../images/terms/term-10-color.svg" alt="Ostatní stavby" /></span>
+                        <span class="chip-label">Ostatní<br>stavby</span>
                       </label>
-
                     </div>
                   </div>
                 </div>
-
-                <button class="btn-mega-submit">
-                  Vyhledat
-                </button>
+                <button class="btn-mega-submit">Vyhledat</button>
               </div>
             </div>
           </div>
@@ -151,113 +113,81 @@
                 stroke-linecap="round" />
             </svg>
           </button>
-
           <div class="dropdown dropdown--mega dropdown--prodat">
-            <div class="mega-inner prodat-grid">
-              <div class="prodat-form-wrapper">
-                <span class="mega-eyebrow">Rychle a bezpečně</span>
-                <h3 class="mega-title-large">Chcete prodat nemovitost?</h3>
-                <p class="mega-subtitle">
-                  Pošlete nám svůj kontakt a o vše se postaráme.
-                </p>
-
-                <form class="prodat-mega-form float-in" id="form-lead" method="post"
-                  action="https://www.viagem.cz/prodej-nemovitosti#anchor-lead">
-
-                  <div class="form-group" id="field-formName">
-                    <label for="formName">Jméno a příjmení</label>
-                    <input type="text" name="formName" id="formName" class="mega-input" required>
-                  </div>
-
-                  <div class="form-sell-contact">
-                    <div class="form-group" id="field-formEmail">
-                      <label for="formEmail">E-mail</label>
-                      <input type="email" name="formEmail" id="formEmail" class="mega-input" required>
-                    </div>
-
-                    <div class="form-group" id="field-formPhone">
-                      <label for="formPhone">Telefon</label>
-                      <input type="tel" name="formPhone" id="formPhone" class="mega-input" required>
-                    </div>
-                  </div>
-
-
-                  <div class="form-group" id="field-leadSpam">
-                    <label for="leadSpam">Jaký je rok? <span class="red">*</span></label>
-                    <input type="text" name="leadSpam" id="leadSpam" class="mega-input" required>
-                  </div>
-
-                  <div class="form-group" id="field-formMessage">
-                    <label for="formMessage">Zpráva</label>
-                    <textarea name="formMessage" id="formMessage" class="mega-input"></textarea>
-                  </div>
-
-                  <div class="form-sell-contact" id="field-leadTerms">
-                    <input type="checkbox" name="leadTerms" id="leadTerms" value="true" required>
-                    <label for="leadTerms">
-                      Souhlasím s Podmínkami zpracování osobních údajů. <span class="red">*</span>
-                    </label>
-
-                  </div>
-
-                  <button type="submit" class="btn-mega-submit btn-mega-submit--large">
-                    Odeslat
-                  </button>
-
-                </form>
-              </div>
-
-              <div class="prodat-sidebar-content">
-                <h4 class="sidebar-title">Chcete inzerovat sami?</h4>
-
-                <a href="/prihlaseni" class="prodat-option-card">
-                  <div class="prodat-option-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                      <polyline points="14 2 14 8 20 8" />
-                      <line x1="16" y1="13" x2="8" y2="13" />
-                      <line x1="16" y1="17" x2="8" y2="17" />
-                      <line x1="10" y1="9" x2="8" y2="9" />
-                    </svg>
-                  </div>
-                  <div class="prodat-option-text">
-                    <span class="title">Vložit vlastní inzerát</span>
-                    <span class="desc">Získejte plnou kontrolu nad prodejem a správou inzerce
-                      na našem portálu.</span>
-                  </div>
-                </a>
-
-                <div class="benefits-block">
-                  <h4 class="sidebar-title">Proč prodat přes Viagem?</h4>
-                  <ul class="mega-benefits-list">
-                    <li>
-                      <div><strong>Bezplatná inzerce</strong> bez skrytých poplatků</div>
-                    </li>
-                    <li>
-                      <div><strong>Okamžitá platba</strong> při přímém výkupu
-                    </li>
-                    <li>
-                      <div>Kompletní <strong>právní servis zdarma</strong></div>
-                    </li>
-                    <li>
-                      <div><strong>Vyřídíme administrativu</strong> na katastru</div>
-                    </li>
-                    <li>
-                      <div><strong>Analytické nástroje</strong> a přehled o trhu</div>
-                    </li>
-                    <li>
-                      <div><strong>Vyšší prodejní ceny</strong> díky zprostředkování</div>
-                    </li>
-                  </ul>
+            <div class="mega-inner prodat-two-col">
+              <div class="prodat-choice-card">
+                <div class="prodat-choice-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 640 640"
+                    fill="currentColor">
+                    <path
+                      d="M320 48C306.7 48 296 58.7 296 72L296 84L294.2 84C257.6 84 228 113.7 228 150.2C228 183.6 252.9 211.8 286 215.9L347 223.5C352.1 224.1 356 228.5 356 233.7C356 239.4 351.4 243.9 345.8 243.9L272 244C256.5 244 244 256.5 244 272C244 287.5 256.5 300 272 300L296 300L296 312C296 325.3 306.7 336 320 336C333.3 336 344 325.3 344 312L344 300L345.8 300C382.4 300 412 270.3 412 233.8C412 200.4 387.1 172.2 354 168.1L293 160.5C287.9 159.9 284 155.5 284 150.3C284 144.6 288.6 140.1 294.2 140.1L360 140C375.5 140 388 127.5 388 112C388 96.5 375.5 84 360 84L344 84L344 72C344 58.7 333.3 48 320 48zM141.3 405.5L98.7 448L64 448C46.3 448 32 462.3 32 480L32 544C32 561.7 46.3 576 64 576L384.5 576C413.5 576 441.8 566.7 465.2 549.5L591.8 456.2C609.6 443.1 613.4 418.1 600.3 400.3C587.2 382.5 562.2 378.7 544.4 391.8L424.6 480L312 480C298.7 480 288 469.3 288 456C288 442.7 298.7 432 312 432L384 432C401.7 432 416 417.7 416 400C416 382.3 401.7 368 384 368L231.8 368C197.9 368 165.3 381.5 141.3 405.5z" />
+                  </svg>
                 </div>
+                <div class="prodat-choice-badge">Doporučujeme</div>
+                <h3 class="prodat-choice-title">Prodat přímo</h3>
+                <p class="prodat-choice-desc">Svěřte prodej do rukou našich odborníků. Postaráme se o oceňování, právní
+                  servis, administrativu na katastru i samotný prodej — za vyšší ceny, než je na trhu běžné. Vy nemusíte
+                  dělat nic.</p>
+                <ul class="prodat-choice-perks">
+                  <li>Právní servis zdarma</li>
+                  <li>Peníze na účtu do 24 hodin</li>
+                  <li>Kompletní administrativa</li>
+                </ul>
+                <a href="/prodej-nemovitosti" class="prodat-choice-btn prodat-choice-btn--primary">
+                  Chci prodat přes Viagem
+                  <svg viewBox="0 0 16 16" fill="none" width="15" height="15">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </div>
+              <div class="prodat-divider"><span>nebo</span></div>
+              <div class="prodat-choice-card">
+                <div class="prodat-choice-icon prodat-choice-icon--secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                    <polyline points="14 2 14 8 20 8" />
+                    <line x1="12" y1="18" x2="12" y2="12" />
+                    <line x1="9" y1="15" x2="15" y2="15" />
+                  </svg>
+                </div>
+                <h3 class="prodat-choice-title">Vložit inzerát</h3>
+                <p class="prodat-choice-desc">Chcete mít plnou kontrolu nad prodejem? Zveřejněte svůj inzerát sami —
+                  zcela zdarma, bez skrytých poplatků. Intuitivní rozhraní vás provede celým procesem za pár minut.</p>
+                <ul class="prodat-choice-perks">
+                  <li>Inzerce 100% zdarma</li>
+                  <li>Přímý kontakt se zájemci</li>
+                  <li>Maximální dosah vaší nemovitosti</li>
+                </ul>
+                <a href="/prihlaseni" class="prodat-choice-btn prodat-choice-btn--ghost">
+                  Vložit vlastní inzerát
+                  <svg viewBox="0 0 16 16" fill="none" width="15" height="15">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <a href="/podnikatelske-uvery" class="nav-link">Úvěry</a>
-        <a href="/zpetny-odkup" class="nav-link">Zpětný odkup</a>
+        <div class="nav-item" id="nav-financovani">
+          <button class="nav-link" onclick="toggleNav('financovani')">
+            Financování
+            <svg class="chevron" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none"
+                stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="dropdown dropdown--simple">
+            <a href="/investice-a-dluhopisy">Pro investory</a>
+            <a href="/podnikatelske-uvery">Podnikatelské úvěry</a>
+            <a href="/zpetny-odkup">Zpětný odkup</a>
+          </div>
+        </div>
+
+        <a href="/nastroje" class="nav-link">Funkce portálu</a>
 
         <div class="nav-item" id="nav-onas">
           <button class="nav-link" onclick="toggleNav('onas')">
@@ -276,41 +206,37 @@
       </nav>
 
       <div class="nav-right">
+        <div class="nav-item compare">
+          <a href="#" class="nav-item-option">
+            <span class="nav-icon"><img src="https://www.viagem.cz/assets/images/icons/icon-comparator-color.svg"
+                alt=""></span>
+          </a>
+        </div>
         <div class="nav-item" id="nav-profile">
           <button class="avatar-btn" onclick="toggleNav('profile')">
             <div class="avatar-circle">JN</div>
           </button>
-
           <div class="dropdown dropdown--profile">
             <a href="#" class="profile-option">
-              <span class="prof-icon">
-                <img src="https://www.viagem.cz/assets/images/terms/term-group-1-color.svg" alt="Mapa pro naceňování" />
-              </span>
+              <span class="prof-icon"><img src="https://www.viagem.cz/assets/images/terms/term-group-1-color.svg"
+                  alt="Mapa pro naceňování" /></span>
               <span class="prof-text">Mapa pro naceňování</span>
             </a>
             <a href="#" class="profile-option">
-              <span class="prof-icon">
-                <img src="https://www.viagem.cz/assets/images/icons/dog-icon.svg" alt="Hlídací pes" />
-              </span>
+              <span class="prof-icon"><img src="https://www.viagem.cz/assets/images/icons/dog-icon.svg"
+                  alt="Hlídací pes" /></span>
               <span class="prof-text">Hlídací pes</span>
             </a>
             <a href="#" class="profile-option">
-              <span class="prof-icon">
-                <img src="https://www.viagem.cz/assets/images/terms/subjetcs.png" alt="Mapa subjektů" />
-              </span>
+              <span class="prof-icon"><img src="https://www.viagem.cz/assets/images/terms/subjetcs.png"
+                  alt="Mapa subjektů" /></span>
               <span class="prof-text">Mapa subjektů</span>
             </a>
-            <a href="#" class="profile-option">
-              <span class="prof-icon">
-                <img src="https://www.viagem.cz/assets/images/icons/zemedelci.png" alt="Zemědělci" />
-              </span>
-              <span class="prof-text">Zemědělci</span>
-            </a>
-            <a href="#" class="profile-option">
-              <span class="prof-icon"><img src="https://www.viagem.cz/assets/images/icons/icon-comparator-color.svg"
-                  alt=""></span>
-              Srovnávač nemovitostí
-            </a>
+            <!-- <a href="#" class="profile-option">
+              <span class="prof-icon"><img src="https://www.viagem.cz/assets/images/icons/zemedelci.png"
+                  alt="Zemědělci" /></span>
+              <span class="prof-text">Zemědělská sekce</span>
+            </a> -->
             <a href="#" class="profile-option">
               <span class="prof-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -322,9 +248,17 @@
               </span>
               <span class="prof-text">Moje inzeráty</span>
             </a>
-
+            <a href="/registrace" class="profile-option profile-option--add">
+              <span class="prof-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v8M8 12h8" />
+                </svg>
+              </span>
+              <span class="prof-text">Přidat službu</span>
+            </a>
             <div class="dropdown-divider-line"></div>
-
             <a href="#" class="profile-option logout">
               <span class="prof-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -338,9 +272,7 @@
             </a>
           </div>
         </div>
-
         <div class="header-divider"></div>
-
         <div class="lang-switch-new">
           <div class="lang-text">
             <a href="#" class="active">CS</a>
@@ -348,9 +280,241 @@
             <a href="#">EN</a>
           </div>
         </div>
+        <button class="hamburger" id="hamburger" aria-label="Otevřít menu" onclick="toggleMobileNav()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav">
+
+    <div class="mobile-nav__header">
+      <div class="avatar-circle-mobile">JN</div>
+      <button class="mobile-nav__close" onclick="closeMobileNav()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+          <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav__links">
+
+      <!-- MAIN NAV -->
+      <div class="mobile-nav__section-title">Navigace</div>
+
+      <!-- KOUPIT — with embedded search form -->
+      <a href="#" onclick="toggleMobileSection('m-koupit'); return false;" class="mobile-nav__item"
+        id="m-koupit-trigger">
+        Koupit
+        <svg class="chevron" viewBox="0 0 16 16" fill="currentColor" width="13" height="13">
+          <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+        </svg>
+      </a>
+
+      <div class="mobile-nav__sub mobile-nav__sub--koupit" id="m-koupit">
+        <div class="m-search-wrap">
+
+          <!-- Location input -->
+          <div class="m-input-group">
+            <div class="m-input-field">
+              <svg class="m-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                width="16" height="16">
+                <circle cx="11" cy="11" r="8" />
+                <path d="m21 21-4.35-4.35" />
+              </svg>
+              <input type="text" id="m-location-main" placeholder="Město, adresa nebo lokalita…"
+                class="m-location-input" />
+            </div>
+
+          </div>
+
+          <!-- Radius + filter toggle row -->
+          <div class="m-meta-row">
+            <div class="m-radius-inline">
+              <label>Okolí</label>
+              <div class="m-radius-input-wrap">
+                <input type="number" min="0" placeholder="0" class="m-radius-input" id="m-radius">
+                <span class="m-radius-unit">km</span>
+              </div>
+            </div>
+            <button type="button" class="m-filter-toggle" id="mFilterToggle" aria-expanded="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <line x1="4" y1="6" x2="20" y2="6" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+                <line x1="11" y1="18" x2="13" y2="18" />
+              </svg>
+              <span class="m-filter-toggle__label">Typ nemovitosti</span>
+              <span class="m-filter-toggle__count" id="mFilterCount" style="display:none"></span>
+              <svg class="m-filter-chevron" viewBox="0 0 16 16" fill="none" width="12" height="12">
+                <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none"
+                  stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Collapsible icon-chip panel -->
+          <div class="m-filter-panel" id="mFilterPanel">
+            <div class="m-icon-chips-grid" id="mChipsGrid">
+              <label class="m-icon-chip">
+                <input type="checkbox" value="1" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-1-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Stavební &amp; komerční</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="2" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-2-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Zahrady &amp; rekreace</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="3" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-3-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Investiční pozemky</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="4" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-4-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Pole</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="5" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-5-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Lesy</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="6" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-6-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Spekulační pozemky</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="7" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-7-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Byty, domy, chaty</span>
+              </label>
+              <label class="m-icon-chip">
+                <input type="checkbox" value="10" />
+                <span class="m-icon-chip__img"><img src="../images/terms/term-10-color.svg" alt="" /></span>
+                <span class="m-icon-chip__label">Ostatní stavby</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Search button -->
+          <button type="button" class="m-search-btn" id="mSearchBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="17" height="17">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            Vyhledat nemovitosti
+          </button>
+        </div>
+
+
+        <!-- Quick browse links -->
+
+      </div>
+
+      <a href="#" onclick="toggleMobileSection('m-prodat'); return false;" class="mobile-nav__item">
+        Prodat
+        <svg class="chevron" viewBox="0 0 16 16" fill="currentColor" width="13" height="13">
+          <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+        </svg>
+      </a>
+      <div class="mobile-nav__sub" id="m-prodat">
+        <a href="/prodej-nemovitosti">Prodat přes Viagem</a>
+        <a href="/prihlaseni">Vložit vlastní inzerát</a>
+      </div>
+
+      <a href="#" onclick="toggleMobileSection('m-fin'); return false;" class="mobile-nav__item">
+        Financování
+        <svg class="chevron" viewBox="0 0 16 16" fill="currentColor" width="13" height="13">
+          <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+        </svg>
+      </a>
+      <div class="mobile-nav__sub" id="m-fin">
+        <a href="/investice-a-dluhopisy">Pro investory</a>
+        <a href="/podnikatelske-uvery">Podnikatelské úvěry</a>
+        <a href="/zpetny-odkup">Zpětný odkup</a>
+      </div>
+
+      <a href="/nastroje" class="mobile-nav__item">Funkce portálu</a>
+
+      <a href="#" onclick="toggleMobileSection('m-onas'); return false;" class="mobile-nav__item">
+        O společnosti
+        <svg class="chevron" viewBox="0 0 16 16" fill="currentColor" width="13" height="13">
+          <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.5" fill="none" />
+        </svg>
+      </a>
+      <div class="mobile-nav__sub" id="m-onas">
+        <a href="/o-nas">Kdo jsme</a>
+        <a href="/kariera">Kariéra</a>
+        <a href="/kontakt">Kontakt</a>
+      </div>
+
+      <!-- TOOLS -->
+      <div class="mobile-nav__section">
+        <div class="mobile-nav__section-title">Moje služby</div>
+
+        <a href="#" class="mobile-nav__item tool-item">
+          <img src="https://www.viagem.cz/assets/images/terms/term-group-1-color.svg" />
+          Mapa pro naceňování
+        </a>
+        <a href="#" class="mobile-nav__item tool-item">
+          <img src="https://www.viagem.cz/assets/images/icons/dog-icon.svg" />
+          Hlídací pes
+        </a>
+        <a href="#" class="mobile-nav__item tool-item">
+          <img src="https://www.viagem.cz/assets/images/terms/subjetcs.png" />
+          Mapa subjektů
+        </a>
+        <!-- <a href="#" class="mobile-nav__item tool-item">
+          <img src="https://www.viagem.cz/assets/images/icons/zemedelci.png" />
+          Zemědělská sekce
+        </a> -->
+        <a href="#" class="mobile-nav__item tool-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="3" y1="9" x2="21" y2="9"></line>
+            <line x1="9" y1="21" x2="9" y2="9"></line>
+          </svg>
+          Moje inzeráty
+        </a>
+        <a href="/registrace" class="mobile-nav__item tool-item tool-item--add">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 8v8M8 12h8" />
+          </svg>
+          Přidat službu
+        </a>
+      </div>
+
+      <!-- BOTTOM: logout + lang -->
+      <div class=" mobile-nav__section--logout">
+        <a href="#" class="mobile-nav__item mobile-nav__logout">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          Odhlásit se
+        </a>
+        <div class="mobile-nav__lang">
+          <a href="#" class="active">CS</a>
+          <span class="lang-sep">/</span>
+          <a href="#">EN</a>
+        </div>
+      </div>
+
+    </nav>
+  </div>
 
   <main>
 
@@ -387,12 +551,15 @@
         </div>
       </div>
       <div class="hero__scroll">
-        scroll
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ STATS ═══ -->
-    <section class=" stats">
+    <!-- STATS -->
+    <section class="stats">
       <div class="stats__inner">
         <div class="stat-item reveal">
           <div class="stat-item__num">#1</div>
@@ -415,7 +582,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ SERVICES ═══ -->
+    <!-- SERVICES -->
     <section class="section">
       <div class="container">
         <div class="reveal">
@@ -425,13 +592,13 @@
             obchod potřebujete.</p>
         </div>
         <div class="services-grid">
-
           <div class="service-card reveal">
             <div class="service-card__num">01</div>
-            <div class="service-card__icon"> <svg width="24" height="24" fill="none" stroke="currentColor"
-                stroke-width="1.6">
+            <div class="service-card__icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="M3 11v2a2 2 0 0 0 2 2h1l3 5h2l-2-5h3l7 3V6l-7 3H5a2 2 0 0 0-2 2z" />
-              </svg></div>
+              </svg>
+            </div>
             <h3 class="service-card__title">Bezplatná inzerce</h3>
             <p class="service-card__desc">Zveřejněte svůj inzerát zcela zdarma a bez skrytých poplatků. Díky
               intuitivnímu rozhraní oslovíte široké publikum zájemců bez zbytečných nákladů a rychle dosáhnete
@@ -444,14 +611,14 @@
               </svg>
             </a>
           </div>
-
           <div class="service-card reveal reveal-delay-1">
             <div class="service-card__num">02</div>
-            <div class="service-card__icon"><svg width="24" height="24" fill="none" stroke="currentColor"
-                stroke-width="1.6">
+            <div class="service-card__icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="M3 3v18h18" />
                 <path d="M7 13l4-4 3 3 5-5" />
-              </svg></div>
+              </svg>
+            </div>
             <h3 class="service-card__title">Analytické služby</h3>
             <p class="service-card__desc">Mapujeme celý český nemovitostní trh pomocí moderních technologií a pokročilé
               datové analýzy. Víme o každém pohybu i cenách realizovaných obchodů – a tato data sdílíme s vámi.</p>
@@ -463,14 +630,14 @@
               </svg>
             </a>
           </div>
-
           <div class="service-card reveal reveal-delay-2">
             <div class="service-card__num">03</div>
-            <div class="service-card__icon"> <svg width="24" height="24" fill="none" stroke="currentColor"
-                stroke-width="1.6">
+            <div class="service-card__icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="M3 11l9-7 9 7" />
                 <path d="M5 10v10h14V10" />
-              </svg></div>
+              </svg>
+            </div>
             <h3 class="service-card__title">Výkup nemovitostí</h3>
             <p class="service-card__desc">Rychlý a férový výkup za tržní ceny bez složitého papírování. Od odborného
               posouzení nemovitosti přes právní služby až po samotnou realizaci – ještě ten den budete mít peníze na
@@ -483,14 +650,14 @@
               </svg>
             </a>
           </div>
-
           <div class="service-card reveal reveal-delay-3">
             <div class="service-card__num">04</div>
-            <div class="service-card__icon"> <svg width="24" height="24" fill="none" stroke="currentColor"
-                stroke-width="1.6">
+            <div class="service-card__icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <rect x="3" y="7" width="18" height="13" rx="2" />
                 <path d="M8 7V5h8v2" />
-              </svg></div>
+              </svg>
+            </div>
             <h3 class="service-card__title">Zprostředkování prodeje</h3>
             <p class="service-card__desc">Jsme nejlepší ve zprostředkování prodeje domů, bytů, stavebních pozemků i orné
               půdy, lesa nebo komerčního pozemku. Za vyšší prodejní ceny, než je na trhu běžné.</p>
@@ -502,159 +669,200 @@
               </svg>
             </a>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ ANALYTICS TEASER ═══ -->
+    <!-- ANALYTICS -->
     <section class="section analytics">
       <div class="analytics__inner">
-        <div class="analytics__text reveal">
+        <div class="analytics__visual reveal">
+          <div class="analytics__chart-title">
+            <div class="analytics__chart-title-main">Tržby skupiny Viagem</div>
+            <div class="analytics__chart-title-sub">v mil. Kč · auditovaná data</div>
+          </div>
+          <div class="analytics__visual-bg">
+            <div class="analytics__chart">
+              <div class="analytics__bar-wrap">
+                <div class="analytics__bar-label-top">148,68 mil.</div>
+                <div class="chart-bar" style="--h: 46%"></div>
+              </div>
+              <div class="analytics__bar-wrap">
+                <div class="analytics__bar-label-top">257,22 mil.</div>
+                <div class="chart-bar" style="--h: 79%"></div>
+              </div>
+              <div class="analytics__bar-wrap">
+                <div class="analytics__bar-label-top">326,66 mil.</div>
+                <div class="chart-bar active" style="--h: 100%"></div>
+              </div>
+            </div>
+            <div class="chart-labels" style="grid-template-columns: repeat(3, 1fr)">
+              <span>2022</span><span>2023</span><span>2024</span>
+            </div>
+          </div>
+          <div class="analytics__mini-stats">
+            <div class="analytics__mini-stat">
+              <div class="analytics__mini-stat-num">13 591</div>
+              <div class="analytics__mini-stat-label">parcel vykoupeno v 2024</div>
+            </div>
+            <div class="analytics__mini-stat">
+              <div class="analytics__mini-stat-num">5 000+</div>
+              <div class="analytics__mini-stat-label">nemovitostí na prodej</div>
+            </div>
+            <div class="analytics__mini-stat">
+              <div class="analytics__mini-stat-num">169,9 mil.</div>
+              <div class="analytics__mini-stat-label">čistý zisk 2024</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="analytics__text reveal reveal-delay-1">
           <div class="section__label">Datová analytika</div>
-          <h2 class="section__title" style="max-width:100%">Informace o nemovitostech?<br>Víme <em
-              style="font-style:normal;color:var(--accent)">vše</em> o každém.</h2>
+          <h2 class="section__title" style="max-width:100%">
+            Výsledky, které mluví.<br>
+            Data, která <em style="font-style:normal;color:var(--accent)">pracují pro vás.</em>
+          </h2>
+          <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;margin-bottom:24px;">
+            Auditované výroční zprávy potvrzují stabilní růst skupiny — z 148,68 mil. Kč tržeb v roce 2022 na 326,66
+            mil. Kč v roce 2024. V témže roce jsme vykoupili 13 591 parcel za 297,39 mil. Kč a prodali je za 364,35
+            mil. Kč.
+          </p>
           <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;margin-bottom:36px;">
-            Pomocí umělé inteligence, strojového učení a big dat mapujeme celý český nemovitostní trh. Máme přehled
-            nejen o všech pohybech, ale i o cenách za které byly realizovány. Víme kdo na pozemcích hospodaří a jaké na
-            ně bere dotace.
+            Za těmito čísly stojí přístup k datům, která mapují celý český nemovitostní trh. Viagem vám dává přístup ke
+            třem věcem, které na trhu s nemovitostmi rozhodují:
           </p>
           <div class="analytics__features">
             <div class="analytics__feat">
-              <div class="analytics__feat-icon"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <div class="analytics__feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                   <path
-                    d="M184 120C184 89.1 209.1 64 240 64L264 64C281.7 64 296 78.3 296 96L296 544C296 561.7 281.7 576 264 576L232 576C202.2 576 177.1 555.6 170 528C169.3 528 168.7 528 168 528C123.8 528 88 492.2 88 448C88 430 94 413.4 104 400C84.6 385.4 72 362.2 72 336C72 305.1 89.6 278.2 115.2 264.9C108.1 252.9 104 238.9 104 224C104 179.8 139.8 144 184 144L184 120zM456 120L456 144C500.2 144 536 179.8 536 224C536 239 531.9 253 524.8 264.9C550.5 278.2 568 305 568 336C568 362.2 555.4 385.4 536 400C546 413.4 552 430 552 448C552 492.2 516.2 528 472 528C471.3 528 470.7 528 470 528C462.9 555.6 437.8 576 408 576L376 576C358.3 576 344 561.7 344 544L344 96C344 78.3 358.3 64 376 64L400 64C430.9 64 456 89.1 456 120z" />
-                </svg></div>
+                    d="M320 48C306.7 48 296 58.7 296 72L296 84L294.2 84C257.6 84 228 113.7 228 150.2C228 183.6 252.9 211.8 286 215.9L347 223.5C352.1 224.1 356 228.5 356 233.7C356 239.4 351.4 243.9 345.8 243.9L272 244C256.5 244 244 256.5 244 272C244 287.5 256.5 300 272 300L296 300L296 312C296 325.3 306.7 336 320 336C333.3 336 344 325.3 344 312L344 300L345.8 300C382.4 300 412 270.3 412 233.8C412 200.4 387.1 172.2 354 168.1L293 160.5C287.9 159.9 284 155.5 284 150.3C284 144.6 288.6 140.1 294.2 140.1L360 140C375.5 140 388 127.5 388 112C388 96.5 375.5 84 360 84L344 84L344 72C344 58.7 333.3 48 320 48zM141.3 405.5L98.7 448L64 448C46.3 448 32 462.3 32 480L32 544C32 561.7 46.3 576 64 576L384.5 576C413.5 576 441.8 566.7 465.2 549.5L591.8 456.2C609.6 443.1 613.4 418.1 600.3 400.3C587.2 382.5 562.2 378.7 544.4 391.8L424.6 480L312 480C298.7 480 288 469.3 288 456C288 442.7 298.7 432 312 432L384 432C401.7 432 416 417.7 416 400C416 382.3 401.7 368 384 368L231.8 368C197.9 368 165.3 381.5 141.3 405.5z" />
+                </svg>
+              </div>
               <div class="analytics__feat-text">
-                <div class="analytics__feat-title">Umělá inteligence & ML</div>
-                <div class="analytics__feat-desc">Pokročilé algoritmy pro analýzu tržních trendů a oceňování nemovitostí
-                  v reálném čase.</div>
+                <div class="analytics__feat-title">Ceny realizovaných obchodů</div>
+                <div class="analytics__feat-desc">Víme za kolik se skutečně prodávalo — reálné transakce z celé ČR, ne
+                  jen inzerované ceny.</div>
               </div>
             </div>
             <div class="analytics__feat">
-              <div class="analytics__feat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <div class="analytics__feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                   <path
-                    d="M576 112C576 103.7 571.7 96 564.7 91.6C557.7 87.2 548.8 86.8 541.4 90.5L416.5 152.1L244 93.4C230.3 88.7 215.3 89.6 202.1 95.7L77.8 154.3C69.4 158.2 64 166.7 64 176L64 528C64 536.2 68.2 543.9 75.1 548.3C82 552.7 90.7 553.2 98.2 549.7L225.5 489.8L396.2 546.7C409.9 551.3 424.7 550.4 437.8 544.2L562.2 485.7C570.6 481.7 576 473.3 576 464L576 112zM208 146.1L208 445.1L112 490.3L112 191.3L208 146.1zM256 449.4L256 148.3L384 191.8L384 492.1L256 449.4zM432 198L528 150.6L528 448.8L432 494L432 198z" />
-                </svg></div>
+                    d="M576 96C576 204.1 499.4 294.3 397.6 315.4C389.7 257.3 363.6 205 325.1 164.5C365.2 104 433.9 64 512 64L544 64C561.7 64 576 78.3 576 96zM64 160C64 142.3 78.3 128 96 128L128 128C251.7 128 352 228.3 352 352L352 544C352 561.7 337.7 576 320 576C302.3 576 288 561.7 288 544L288 384C164.3 384 64 283.7 64 160z" />
+                </svg>
+              </div>
               <div class="analytics__feat-text">
-                <div class="analytics__feat-title">Kompletní mapování trhu</div>
-                <div class="analytics__feat-desc">Přehled o každé nemovitosti v ČR – od dotací přes hospodaření až po
-                  historické ceny obchodů.</div>
+                <div class="analytics__feat-title">Hospodaření a dotace na pozemcích</div>
+                <div class="analytics__feat-desc">Víme, kdo na pozemcích hospodaří a jaké dotace čerpá — informace,
+                  které jinde nenajdete.</div>
               </div>
             </div>
             <div class="analytics__feat">
-              <div class="analytics__feat-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <div class="analytics__feat-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                   <path
-                    d="M416 224C398.3 224 384 209.7 384 192C384 174.3 398.3 160 416 160L576 160C593.7 160 608 174.3 608 192L608 352C608 369.7 593.7 384 576 384C558.3 384 544 369.7 544 352L544 269.3L374.6 438.7C362.1 451.2 341.8 451.2 329.3 438.7L224 333.3L86.6 470.6C74.1 483.1 53.8 483.1 41.3 470.6C28.8 458.1 28.8 437.8 41.3 425.3L201.3 265.3C213.8 252.8 234.1 252.8 246.6 265.3L352 370.7L498.7 224L416 224z" />
-                </svg></div>
+                    d="M512 320C512 214 426 128 320 128C214 128 128 214 128 320C128 426 214 512 320 512C426 512 512 426 512 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM320 400C364.2 400 400 364.2 400 320C400 275.8 364.2 240 320 240C275.8 240 240 275.8 240 320C240 364.2 275.8 400 320 400zM320 176C399.5 176 464 240.5 464 320C464 399.5 399.5 464 320 464C240.5 464 176 399.5 176 320C176 240.5 240.5 176 320 176zM288 320C288 302.3 302.3 288 320 288C337.7 288 352 302.3 352 320C352 337.7 337.7 352 320 352C302.3 352 288 337.7 288 320z" />
+                </svg>
+              </div>
               <div class="analytics__feat-text">
-                <div class="analytics__feat-title">Náskok před konkurencí</div>
-                <div class="analytics__feat-desc">Dejte si data, která rozhodují. Vyzkoušejte naše analytické služby
-                  bezplatně.</div>
+                <div class="analytics__feat-title">Náskok před trhem</div>
+                <div class="analytics__feat-desc">Ať hledáte výhodu před konkurencí, nebo jen chcete pracovat
+                  efektivněji — vyzkoušejte náš portál bezplatně.</div>
               </div>
             </div>
           </div>
           <div style="margin-top:40px;">
-            <a href="https://www.viagem.cz/kontakt" class="btn-primary">Kontaktovat obchodního zástupce</a>
+            <a href="/registrace" class="btn-primary">Vytvořit bezplatný účet</a>
           </div>
         </div>
-        <div class="analytics__visual reveal reveal-delay-1">
-          <div class="analytics__visual-bg">
-            <div class="analytics__pill-row">
-              <div class="analytics__pill">AI analýza</div>
-              <div class="analytics__pill">Big Data</div>
-              <div class="analytics__pill">Real-time</div>
-              <div class="analytics__pill">ML modely</div>
+      </div>
+    </section>
+
+    <!-- INVESTICE -->
+    <section class="section investice-sec">
+      <div class="container">
+        <div class="investice-inner reveal">
+          <div class="investice-text">
+            <div class="section__label">Investice</div>
+            <h2 class="section__title">Investujte do nemovitostí<br>s <em
+                style="font-style:normal;color:var(--accent)">jistotou</em></h2>
+            <p style="font-size:0.95rem;color:var(--muted);line-height:1.7;margin-bottom:36px;">
+              Viagem Investment a.s. vydává zajištěné dluhopisy s pevným výnosem. Vaše investice jsou kryty
+              nemovitostním portfoliem skupiny Viagem — 37 679 parcel, 16+ milionů m² a vlastní kapitál přes 478 mil.
+              Kč.
+            </p>
+            <div class="investice-financials">
+              <div class="investice-fin-item">
+                <div class="investice-fin-num">478 mil. Kč</div>
+                <div class="investice-fin-label">Vlastní kapitál</div>
+              </div>
+              <div class="investice-fin-item">
+                <div class="investice-fin-num">152 mil. Kč</div>
+                <div class="investice-fin-label">EBITDA k 31. 12. 2024</div>
+              </div>
+              <div class="investice-fin-item">
+                <div class="investice-fin-num">16+ mil. m²</div>
+                <div class="investice-fin-label">Pozemků v portfoliu</div>
+              </div>
             </div>
-            <div class="analytics__chart">
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar active"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
-              <div class="chart-bar"></div>
+            <div style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;">
+              <a href="/investice-a-dluhopisy" class="btn-primary">
+                Zjistit více o dluhopisech
+                <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </a>
+              <a href="/kontakt" class="btn-ghost">Kontaktovat nás</a>
             </div>
-            <div class="chart-labels">
-              <span>Q1</span>
-              <span>Q2</span>
-              <span>Q3</span>
-              <span>Q4</span>
-              <span>Q1</span>
-              <span>Q2</span>
-              <span>Q3</span>
-              <span>Q4</span>
-            </div>
-            <div
-              style="position:absolute;top:60px;right:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:16px 20px;">
-              <div style="font-size:0.7rem;color:var(--muted);margin-bottom:4px;">Obchodů realizováno</div>
-              <div style="font-family:var(--font-head);font-size:1.6rem;font-weight:800;color:var(--accent);">+34%</div>
-              <div style="font-size:0.7rem;color:var(--muted);">meziročně</div>
+          </div>
+          <div class="investice-visual reveal reveal-delay-1">
+            <div class="investice-badge-wrap">
+              <div class="investice-badge">
+                <div class="investice-badge__label">Zajištěno nemovitostmi</div>
+                <div class="investice-badge__num">37 679</div>
+                <div class="investice-badge__sub">parcel v portfoliu</div>
+              </div>
+              <div class="investice-tag investice-tag--1">Pevný výnos</div>
+              <div class="investice-tag investice-tag--2">Zajištěné dluhopisy</div>
+              <div class="investice-tag investice-tag--3">Skupina Viagem</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ CTA BANNER ═══ -->
-    <div class="cta-banner">
-      <div class="cta-banner__inner reveal">
-        <div>
-          <div class="section__label" style="margin-bottom:12px;">Začněte ještě dnes</div>
-          <h2 class="cta-banner__title">Zprůhledníme realitní<br>trh pro vás</h2>
-          <p class="cta-banner__sub">Neplaťte zbytečně provize realitním makléřům. Vložte inzerát zdarma nebo nás
-            kontaktujte pro nezávaznou konzultaci. Nemovitosti nejsou složité!</p>
-        </div>
-        <div class="cta-banner__btns">
-          <a href="https://www.viagem.cz/vlozit-inzerat" class="btn-primary" style="justify-content:center;">
-            Vložit inzerát zdarma
-          </a>
-          <a href="https://www.viagem.cz/kontakt" class="btn-ghost" style="justify-content:center;">
-            Kontaktovat nás
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══════════ SKUPINA VIAGEM ═══════════ -->
+    <!-- SKUPINA VIAGEM -->
     <section class="skupina-sec section">
       <div class="skupina-inner rv">
         <div class="skupina-label">Skupina</div>
         <h2 class="skupina-title">Skupina VIAGEM</h2>
         <div class="skupina-logos">
-          <a href="https://www.viagem.cz" class="skupina-logo-item">
-            <img src="https://www.viagem.cz/assets/images/logos/viagem.png" alt="VIAGEM">
-          </a>
-          <a href="https://www.altaxo.cz" class="skupina-logo-item" target="_blank">
-            <img src="https://www.viagem.cz/assets/images/logos/altaxo.png" alt="Altaxo">
-          </a>
-          <a href="https://1cr.cz" class="skupina-logo-item" target="_blank">
-            <img src="https://www.viagem.cz/assets/images/logos/1cr.png" alt="1. česká realitní">
-          </a>
-          <a href="https://www.fkviagemusti.cz" class="skupina-logo-item" target="_blank">
-            <img src="https://www.viagem.cz/assets/images/logos/fk-viagem.png" alt="FK Viagem Ústí nad Labem">
-          </a>
+          <a href="https://www.viagem.cz" class="skupina-logo-item"><img
+              src="https://www.viagem.cz/assets/images/logos/viagem.png" alt="VIAGEM"></a>
+          <a href="https://www.altaxo.cz" class="skupina-logo-item" target="_blank"><img
+              src="https://www.viagem.cz/assets/images/logos/altaxo.png" alt="Altaxo"></a>
+          <a href="https://1cr.cz" class="skupina-logo-item" target="_blank"><img
+              src="https://www.viagem.cz/assets/images/logos/1cr.png" alt="1. česká realitní"></a>
+          <a href="https://www.fkviagemusti.cz" class="skupina-logo-item" target="_blank"><img
+              src="https://www.viagem.cz/assets/images/logos/fk-viagem.png" alt="FK Viagem Ústí nad Labem"></a>
         </div>
       </div>
     </section>
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="upper-footer">
       <div class="company-info">
         <a class="header-logo" href="http://localhost:8080">
-
-          <img src="../images//viagem-logo.svg" class="icon" alt="Realitní portál VIAGEM" />
-
+          <img src="../images/viagem-logo.svg" class="icon" alt="Realitní portál VIAGEM" />
         </a>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga iusto dolores fugit, maiores quasi
-          libero
-          tempora facere, iste, molestiae ipsam debitis. Eum suscipit voluptatum esse iusto sunt consequatur,
-          facilis assumenda? </p>
+        <p>Nemovitosti bez prostředníků a zbytečných nákladů. Kupujte, prodávejte a investujte přímo — s daty a
+          nástroji, které vám dají náskok.</p>
       </div>
-
       <div class="prefoot prefoot-terms">
         <h2 class="prefoot-title">Nemovitosti</h2>
         <div class="prefoot-content float-in">
@@ -662,243 +870,335 @@
             <ul>
               <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=1">Stavební, bydlení a
                   komerční</a></li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=2">Zahrady,
-                  rekreace</a></li>
-              <li class="menu-item current-menu-item"><a
-                  href="http://localhost:8080/nemovitosti-na-prodej?terms=3">Investiční pozemky</a>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=2">Zahrady, rekreace</a>
               </li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=4">Pole</a>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=3">Investiční pozemky</a>
               </li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=5">Lesy</a>
-              </li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=4">Pole</a></li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=5">Lesy</a></li>
               <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=6">Spekulační pozemky</a>
               </li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=7">Byty</a>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=7">Byty</a></li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=8">Domy</a></li>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=9">Chaty a chalupy</a>
               </li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=8">Domy</a>
+              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=10">Ostatní stavby</a>
               </li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=9">Chaty a
-                  chalupy</a></li>
-              <li class="menu-item"><a href="http://localhost:8080/nemovitosti-na-prodej?terms=10">Ostatní
-                  stavby</a></li>
             </ul>
           </div>
         </div>
       </div>
-
       <div class="footer-col">
         <h2>Společnost</h2>
-        <a href="http://localhost:8080/o-nas">O nás</a>
-        <a href="http://localhost:8080/kariera">Kariéra</a>
-        <a href="http://localhost:8080/kontakt">Kontakt</a>
-        <a href="#">Adresář realitních kanceláří</a>
-        <a href="#">Firemní profil</a>
+        <div class="footer-col-content">
+          <a href="http://localhost:8080/o-nas">O nás</a>
+          <a href="http://localhost:8080/kariera">Kariéra</a>
+          <a href="http://localhost:8080/kontakt">Kontakt</a>
+          <a href="#">Adresář realitních kanceláří</a>
+        </div>
       </div>
-
       <div class="prefoot prefoot-contacts">
         <h2 class="prefoot-title">Rychlý kontakt</h2>
         <div class="prefoot-content">
           <div class="prefoot-contact-items bold">
-            <div class="contact-item contact-phone"><a id="phone_1-prefooter" href="tel:1200">1200</a>
+            <div class="contact-item contact-phone">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="14" height="14" fill="currentColor"
+                style="margin-right:8px;vertical-align:middle;opacity:0.6">
+                <path
+                  d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z" />
+              </svg>
+              <a id="phone_1-prefooter" href="tel:1200">1200</a>
             </div>
-            <div class="contact-item contact-email"><a id="email_contact-prefooter" class="email-encoded"
-                href="mailto:info@viagem.cz"><span class="email-string">info@viagem.cz</span></a></div>
+            <div class="contact-item contact-email">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="14" height="14" fill="currentColor"
+                style="margin-right:8px;vertical-align:middle;opacity:0.6">
+                <path
+                  d="M125.4 128C91.5 128 64 155.5 64 189.4C64 190.3 64 191.1 64.1 192L64 192L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 192L575.9 192C575.9 191.1 576 190.3 576 189.4C576 155.5 548.5 128 514.6 128L125.4 128zM528 256.3L528 448C528 456.8 520.8 464 512 464L128 464C119.2 464 112 456.8 112 448L112 256.3L266.8 373.7C298.2 397.6 341.7 397.6 373.2 373.7L528 256.3zM112 189.4C112 182 118 176 125.4 176L514.6 176C522 176 528 182 528 189.4C528 193.6 526 197.6 522.7 200.1L344.2 335.5C329.9 346.3 310.1 346.3 295.8 335.5L117.3 200.1C114 197.6 112 193.6 112 189.4z" />
+              </svg>
+              <a id="email_contact-prefooter" class="email-encoded" href="mailto:info@viagem.cz"><span
+                  class="email-string">info@viagem.cz</span></a>
+            </div>
           </div>
           <div class="prefoot-address">
-            <strong>Viagem a.s.</strong><br>Sokolovská 131/86 - Zirkon office<br>Praha 186 00<br>IČ:
-            04817320<br>DIČ: CZ04817320
+            <strong>Viagem a.s.</strong><br>
+            Sokolovská 131/86 - Zirkon office<br>
+            Praha 186 00<br>
+            IČ: 04817320<br>
+            DIČ: CZ04817320
+          </div>
+          <div class="footer-legal-links">
+            <a href="#">Zpracování osobních údajů</a>
+            <a href="#">Obchodní podmínky</a>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="middle-footer">
-      <a href="#">Zpracování osobních údajů</a>
-      <a href="#">Obchodní podmínky</a>
-      <a href="http://localhost:8080/podnikatelske-uvery">Podnikatelské úvěry</a>
-      <a href="http://localhost:8080/investice-a-dluhopisy">Investiční sekce</a>
-    </div>
-
-
     <div class="bottom-footer">
       <div class="foot left">© 2026 Viagem a.s.</div>
       <div class="foot right">
-        <div class="social-networks"><a href="https://www.facebook.com/viagemcz/" target="_blank"><img
-              src="../images/social/facebook.svg" class="icon" alt="Facebook"></a><a
-            href="https://www.instagram.com/viagem.a.s/" target="_blank"><img src="../images/social/instagram.svg"
+        <div class="social-networks">
+          <a href="https://www.facebook.com/viagemcz/" target="_blank"><img src="../images/social/facebook.svg"
+              class="icon" alt="Facebook"></a>
+          <a href="https://www.instagram.com/viagem.a.s/" target="_blank"><img src="../images/social/instagram.svg"
               class="icon" alt="Instagram"></a>
+          <a href="https://www.youtube.com/@viagem.a.s." target="_blank"><img
+              src="https://www.viagem.cz/assets/images/social/youtube.svg" class="icon" alt="Youtube"></a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Zpět nahoru">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
   <script>
+    /* ══════════════════════════════════════
+       DESKTOP NAV
+    ══════════════════════════════════════ */
     const header = document.getElementById('siteHeader');
     let currentOpen = null;
-    document
-      .getElementById('addLocationBtn')
-      .addEventListener('click', addLocationDD);
+
+    document.getElementById('addLocationBtn').addEventListener('click', addLocationDD);
 
     function toggleNav(id) {
-      if (currentOpen === id) {
-        closeAll();
-      } else {
+      if (currentOpen === id) { closeAll(); }
+      else {
         closeAll(false);
         currentOpen = id;
-
         const el = document.getElementById('nav-' + id);
         if (el) el.classList.add('open');
-
         header.classList.add('has-open');
       }
     }
 
     function closeAll(reset = true) {
-      document
-        .querySelectorAll('.nav-item.open')
-        .forEach((el) => el.classList.remove('open'));
-
+      document.querySelectorAll('.nav-item.open').forEach(el => el.classList.remove('open'));
       header.classList.remove('has-open');
-
       if (reset) currentOpen = null;
     }
 
-    // ===== CLOSE WHEN CLICK OUTSIDE =====
     document.addEventListener('click', (e) => {
-      // allow clicks inside nav OR on triggers
-      if (
-        !e.target.closest('.nav-item') &&
-        !e.target.closest('#hero-buy') &&
-        !e.target.closest('#hero-sell')
-      ) {
+      if (!e.target.closest('.nav-item') && !e.target.closest('#hero-buy') && !e.target.closest('#hero-sell')) {
         closeAll();
       }
     });
 
-    // ===== HERO BUTTONS =====
     const heroBuy = document.getElementById('hero-buy');
     const heroSell = document.getElementById('hero-sell');
 
     if (heroBuy) {
       heroBuy.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        toggleNav('koupit');
-
-        document.getElementById('siteHeader').scrollIntoView({
-          behavior: 'smooth'
-        });
+        e.preventDefault(); e.stopPropagation();
+        if (window.innerWidth <= 768) {
+          toggleMobileNav();
+          setTimeout(() => {
+            toggleMobileSection('m-koupit');
+          }, 50);
+        } else {
+          toggleNav('koupit');
+          document.getElementById('siteHeader').scrollIntoView({ behavior: 'smooth' });
+        }
       });
     }
-
     if (heroSell) {
       heroSell.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-
-        toggleNav('prodat');
-
-        document.getElementById('siteHeader').scrollIntoView({
-          behavior: 'smooth'
-        });
+        e.preventDefault(); e.stopPropagation();
+        if (window.innerWidth <= 768) {
+          toggleMobileNav();
+          setTimeout(() => {
+            toggleMobileSection('m-prodat');
+          }, 50);
+        } else {
+          toggleNav('prodat');
+          document.getElementById('siteHeader').scrollIntoView({ behavior: 'smooth' });
+        }
       });
     }
 
-    // ===== MULTISELECT =====
+    /* ── Desktop multiselect ── */
     const ms = document.getElementById('multiSelectContainer');
-
     if (ms) {
-      document
-        .getElementById('typeTrigger')
-        .addEventListener('click', (e) => {
-          e.stopPropagation();
-          ms.classList.toggle('open');
-        });
-
-      document.addEventListener('click', (e) => {
-        if (!ms.contains(e.target)) ms.classList.remove('open');
+      document.getElementById('typeTrigger').addEventListener('click', (e) => {
+        e.stopPropagation(); ms.classList.toggle('open');
       });
+      document.addEventListener('click', (e) => { if (!ms.contains(e.target)) ms.classList.remove('open'); });
 
       function updateTriggerLabel() {
-        const selected = [
-          ...document.querySelectorAll(
-            '.icon-chip input[type="checkbox"]:checked'
-          ),
-        ].map((cb) =>
-          cb
-            .closest('.icon-chip')
-            .querySelector('.chip-label')
-            .textContent.trim()
-        );
-
+        const selected = [...document.querySelectorAll('.icon-chip input[type="checkbox"]:checked')]
+          .map(cb => cb.closest('.icon-chip').querySelector('.chip-label').textContent.trim());
         const label = document.querySelector('#typeTrigger span:first-child');
-
-        if (selected.length === 0) {
-          label.textContent = 'Typ nemovitosti';
-          label.style.color = '#475569';
-        } else if (selected.length === 1) {
-          label.textContent = selected[0];
-          label.style.color = 'var(--primary-accent)';
-        } else {
-          label.textContent = `${selected.length} typy vybrány`;
-          label.style.color = 'var(--primary-accent)';
-        }
+        if (selected.length === 0) { label.textContent = 'Typ nemovitosti'; label.style.color = '#475569'; }
+        else if (selected.length === 1) { label.textContent = selected[0]; label.style.color = 'var(--primary-accent)'; }
+        else { label.textContent = `${selected.length} typy vybrány`; label.style.color = 'var(--primary-accent)'; }
       }
-
-      document
-        .querySelectorAll('.icon-chip input[type="checkbox"]')
-        .forEach((cb) => {
-          cb.addEventListener('change', () => {
-            cb.closest('.icon-chip').classList.toggle('selected', cb.checked);
-            updateTriggerLabel();
-          });
+      document.querySelectorAll('.icon-chip input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', () => {
+          cb.closest('.icon-chip').classList.toggle('selected', cb.checked);
+          updateTriggerLabel();
         });
+      });
     }
 
-    // ===== ADD LOCATION =====
+    /* ── Desktop add location ── */
     function addLocationDD() {
       const container = document.getElementById('extra-locations-dd');
+      const row = document.createElement('div'); row.className = 'extra-loc-row';
+      const input = document.createElement('input'); input.type = 'text'; input.placeholder = 'Další lokalita…';
+      const btn = document.createElement('button'); btn.type = 'button'; btn.className = 'remove-loc-btn'; btn.textContent = '×';
+      btn.addEventListener('click', (e) => { e.stopPropagation(); row.remove(); });
+      row.appendChild(input); row.appendChild(btn); container.appendChild(row); input.focus();
+    }
 
-      const row = document.createElement('div');
-      row.className = 'extra-loc-row';
+    /* ══════════════════════════════════════
+       MOBILE NAV
+    ══════════════════════════════════════ */
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobileNav');
+      const overlay = document.getElementById('mobileNavOverlay');
+      const hamburger = document.getElementById('hamburger');
+      const isOpen = nav.classList.contains('open');
+      nav.classList.toggle('open');
+      overlay.classList.toggle('open');
+      hamburger.classList.toggle('open');
+      document.body.classList.toggle('nav-open');
+    }
 
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.placeholder = 'Další lokalita…';
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('mobileNavOverlay').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
 
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'remove-loc-btn';
-      btn.textContent = '×';
+    function toggleMobileSection(id) {
+      const el = document.getElementById(id);
+      const trigger = el.previousElementSibling;
+      const isOpen = el.classList.contains('open');
 
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        row.remove();
+      // close all
+      document.querySelectorAll('.mobile-nav__sub.open').forEach(s => {
+        s.classList.remove('open');
+        if (s.previousElementSibling) s.previousElementSibling.classList.remove('active');
       });
 
-      row.appendChild(input);
-      row.appendChild(btn);
-      container.appendChild(row);
-
-      input.focus();
-    }
-    const reveals = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); // optional (animate only once)
-          }
-        });
-      },
-      {
-        threshold: 0.15, // trigger when 15% visible
+      if (!isOpen) {
+        el.classList.add('open');
+        if (trigger) trigger.classList.add('active');
+        // smooth scroll into view after transition starts
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 50);
       }
-    );
+    }
 
-    reveals.forEach((el) => observer.observe(el));
+    /* ── Mobile icon-chip selection ── */
+    document.querySelectorAll('#mChipsGrid .m-icon-chip input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('.m-icon-chip').classList.toggle('m-icon-chip--active', cb.checked);
+        updateMobileFilterBadge();
+      });
+    });
+
+    function updateMobileFilterBadge() {
+      const count = document.querySelectorAll('#mChipsGrid .m-icon-chip input:checked').length;
+      const badge = document.getElementById('mFilterCount');
+      const label = document.querySelector('.m-filter-toggle__label');
+      if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = '';
+        label.textContent = count === 1 ? '1 typ vybrán' : `${count} typy vybrány`;
+      } else {
+        badge.style.display = 'none';
+        label.textContent = 'Typ nemovitosti';
+      }
+    }
+
+    /* ── Filter panel toggle ── */
+    document.getElementById('mFilterToggle').addEventListener('click', () => {
+      const panel = document.getElementById('mFilterPanel');
+      const btn = document.getElementById('mFilterToggle');
+      const isOpen = panel.classList.contains('open');
+      panel.classList.toggle('open', !isOpen);
+      btn.classList.toggle('active', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    /* ── Mobile search button ── */
+    document.getElementById('mSearchBtn').addEventListener('click', () => {
+      const location = document.getElementById('m-location-main').value.trim();
+      const radius = document.getElementById('m-radius').value;
+      const checkedTerms = [...document.querySelectorAll('#mChipsGrid .m-icon-chip input:checked')]
+        .map(cb => cb.value);
+
+      let url = '/nemovitosti-na-prodej?';
+      if (location) url += `q=${encodeURIComponent(location)}&`;
+      if (radius) url += `radius=${radius}&`;
+      if (checkedTerms.length) url += `terms=${checkedTerms.join(',')}&`;
+      url = url.replace(/&$/, '').replace(/\?$/, '');
+
+      window.location.href = url || '/nemovitosti-na-prodej';
+    });
+
+    /* ══════════════════════════════════════
+       REVEAL ON SCROLL
+    ══════════════════════════════════════ */
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => revealObserver.observe(el));
+
+    /* ══════════════════════════════════════
+       SCROLL TO TOP
+    ══════════════════════════════════════ */
+    const scrollBtn = document.getElementById('scrollTopBtn');
+    const siteFooter = document.querySelector('.footer');
+    if (scrollBtn) {
+      function updateScrollBtn() {
+        scrollBtn.classList.toggle('visible', window.scrollY > 300);
+        if (siteFooter) {
+          const footerRect = siteFooter.getBoundingClientRect();
+          const viewH = window.innerHeight;
+          if (footerRect.top < viewH) {
+            const visibleH = viewH - footerRect.top;
+            scrollBtn.style.setProperty('--footer-offset', (visibleH + 16) + 'px');
+            scrollBtn.classList.add('above-footer');
+          } else {
+            scrollBtn.classList.remove('above-footer');
+            scrollBtn.style.removeProperty('--footer-offset');
+          }
+        }
+      }
+      window.addEventListener('scroll', updateScrollBtn, { passive: true });
+      window.addEventListener('resize', updateScrollBtn, { passive: true });
+      scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
+
+    /* ══════════════════════════════════════
+       FOOTER ACCORDION (mobile only)
+    ══════════════════════════════════════ */
+    (function initFooterAccordion() {
+      const isMobile = () => window.innerWidth <= 768;
+      document.querySelectorAll('.prefoot-title, .footer-col h2').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          if (!isMobile()) return;
+          const parent = toggle.closest('.prefoot, .footer-col');
+          const isOpen = parent.classList.contains('open');
+          document.querySelectorAll('.prefoot.open, .footer-col.open').forEach(el => el.classList.remove('open'));
+          if (!isOpen) parent.classList.add('open');
+        });
+      });
+    })();
   </script>
 </body>
 
