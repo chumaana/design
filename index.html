@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dluhopisy &mdash; VIAGEM Investment</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Header (replika viagem.cz) -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a class="header-logo" href="#">
+        <img src="assets/viagem-logo.svg" class="icon" alt="Realitn&iacute; port&aacute;l VIAGEM" />
+      </a>
+
+      <nav class="site-nav" id="siteNav">
+
+        <div class="nav-item" id="nav-koupit">
+          <button class="nav-link" data-toggle="koupit">
+            Koupit
+            <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+              <use href="assets/icons.svg#chevron" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="nav-item" id="nav-prodat">
+          <button class="nav-link" data-toggle="prodat">
+            Prodat
+            <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+              <use href="assets/icons.svg#chevron" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="nav-item" id="nav-financovani">
+          <button class="nav-link" data-toggle="financovani">
+            Financov&aacute;n&iacute;
+            <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+              <use href="assets/icons.svg#chevron" />
+            </svg>
+          </button>
+          <div class="dropdown dropdown--simple">
+            <a href="#" class="is-current">Pro investory</a>
+            <a href="#">Podnikatelsk&eacute; &uacute;věry</a>
+            <a href="#">Zpětn&yacute; odkup</a>
+          </div>
+        </div>
+
+        <a href="#" class="nav-link">Funkce port&aacute;lu</a>
+
+        <div class="nav-item" id="nav-onas">
+          <button class="nav-link" data-toggle="onas">
+            O společnosti
+            <svg class="chevron" viewBox="0 0 16 16" aria-hidden="true">
+              <use href="assets/icons.svg#chevron" />
+            </svg>
+          </button>
+          <div class="dropdown dropdown--simple">
+            <a href="#">Kdo jsme</a>
+            <a href="#">Kari&eacute;ra</a>
+            <a href="#">Kontakt</a>
+          </div>
+        </div>
+
+      </nav>
+
+      <div class="nav-right">
+        <div class="nav-item compare">
+          <a href="#" class="nav-item-option" aria-label="Porovn&aacute;vač">
+            <span class="nav-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+                <use href="assets/icons.svg#compare" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <a href="#" class="login-btn">Přihl&aacute;sit</a>
+
+        <div class="header-divider"></div>
+
+        <div class="lang-switch-new">
+          <div class="lang-text">
+            <a href="#" class="active">CS</a>
+            <span class="lang-sep">/</span>
+            <a href="#">EN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero — clean white, all-sans, gold accents -->
+    <section class="hero">
+
+      <div class="hero__bg" data-parallax="0.15"></div>
+      <div class="hero__grid" data-parallax="0.3"></div>
+      <div class="hero__cursor-glow" data-cursor-glow></div>
+      <div class="hero__glow hero__glow--gold" data-parallax="0.5"></div>
+      <div class="hero__glow hero__glow--blue" data-parallax="0.4"></div>
+
+      <div class="particles" aria-hidden="true">
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+        <span class="particle"></span><span class="particle"></span><span class="particle"></span>
+      </div>
+
+      <div class="hero__inner">
+
+        <div class="kicker">
+          <span class="kicker__txt">Dluhopisy VIAGEM Investment Emise 2026</span>
+        </div>
+
+        <div class="head-row">
+
+          <h1 class="display">
+            <span class="display__line">Pevn&yacute; v&yacute;nos</span>
+            <span class="display__line">z&nbsp;česk&yacute;ch <span
+                class="display__bold">nemovitost&iacute;</span></span>
+          </h1>
+
+          <aside class="rate">
+            <div class="rate__head">
+              <span class="rate__id">[ ROI 2026 ]</span>
+            </div>
+
+            <span class="rate__label">Ročn&iacute; v&yacute;nos</span>
+
+            <div class="rate__num-wrap">
+              <span class="hud-c hud-c--tl"></span>
+              <span class="hud-c hud-c--tr"></span>
+              <span class="hud-c hud-c--bl"></span>
+              <span class="hud-c hud-c--br"></span>
+
+              <div class="rate__num">
+                <span data-counter="7,1">0,0</span><span class="rate__pct">&nbsp;%</span>
+                <span class="rate__shine" aria-hidden="true"></span>
+              </div>
+            </div>
+
+            <span class="rate__sub">vypl&aacute;cen&yacute; měs&iacute;čně</span>
+          </aside>
+
+        </div>
+
+        <p class="lead">
+          Dluhopis je investičn&iacute; n&aacute;stroj s&nbsp;pevn&yacute;m v&yacute;nosem.
+          Půjč&iacute;te n&aacute;m peníze, my v&aacute;m každ&yacute;
+          <span class="tip"
+            data-tip="Úroky vám chodí na účet pravidelně po celou dobu trvání dluhopisu.">měs&iacute;c</span>
+          vypl&aacute;c&iacute;me &uacute;rok &mdash; a&nbsp;po
+          <span class="tip"
+            data-tip="Dluhopisový program má dobu trvání 5 let s maximálním objemem 500 mil. Kč. Po splatnosti vám vracíme jistinu (původní investovanou částku).">pěti
+            letech</span>
+          vr&aacute;t&iacute;me jistinu zpět. Va&scaron;e investice je zaji&scaron;těna
+          <span class="tip"
+            data-tip="Dluhopisy jsou vydávány jako zajištěné ručitelským prohlášením společnosti VIAGEM a.s., IČ: 04817320 — mateřské společnosti emitenta.">ručitelsk&yacute;m
+            prohl&aacute;&scaron;en&iacute;m společnosti VIAGEM&nbsp;a.s.</span>
+          s&nbsp;vlastn&iacute;m kapit&aacute;lem přes
+          <span class="tip"
+            data-tip="Vlastní kapitál skupiny VIAGEM k únoru 2026 činí 478 609 tis. Kč. Skupina vlastní 37 679 parcel a 16+ mil. m² půdy.">478&nbsp;mil.
+            Kč</span>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#calculator" class="cta-btn">
+            <span class="cta-btn__txt">Spočítat můj v&yacute;nos</span>
+            <svg class="cta-btn__arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+              <use href="assets/icons.svg#arrow-right" />
+            </svg>
+          </a>
+          <span class="hero-cta__hint">
+            <span class="hero-cta__hint-dot"></span>
+            Kalkulačka v&yacute;nosů
+          </span>
+        </div>
+
+      </div>
+
+      <a href="#why" class="next-mark" aria-label="Pokračovat n&iacute;že">
+        <svg class="next-mark__arrow" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+          <use href="assets/icons.svg#arrow-down" />
+        </svg>
+      </a>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker__track">
+          <span class="ticker__item"><span class="ticker__tag">V&Yacute;NOS</span> 7,1&nbsp;% p.&nbsp;a.</span>
+          <span class="ticker__item"><span class="ticker__tag">ČNB</span> Schv&aacute;leno regul&aacute;torem</span>
+          <span class="ticker__item"><span class="ticker__tag">ZAJI&Scaron;TĚNĺ</span> 478&nbsp;mil. Kč</span>
+          <span class="ticker__item"><span class="ticker__tag">V&Yacute;PLATA</span> 12&times; ročně</span>
+          <span class="ticker__item"><span class="ticker__tag">DOBA</span> 5 let</span>
+          <span class="ticker__item"><span class="ticker__tag">OBJEM</span> 500&nbsp;mil. Kč</span>
+          <span class="ticker__item"><span class="ticker__tag">PORTFOLIO</span> 37&nbsp;679 parcel</span>
+          <span class="ticker__item"><span class="ticker__tag">PLOCHA</span> 16&nbsp;mil.+ m&sup2;</span>
+          <!-- duplicate for seamless loop -->
+          <span class="ticker__item"><span class="ticker__tag">V&Yacute;NOS</span> 7,1&nbsp;% p.&nbsp;a.</span>
+          <span class="ticker__item"><span class="ticker__tag">ČNB</span> Schv&aacute;leno regul&aacute;torem</span>
+          <span class="ticker__item"><span class="ticker__tag">ZAJI&Scaron;TĚNĺ</span> 478&nbsp;mil. Kč</span>
+          <span class="ticker__item"><span class="ticker__tag">V&Yacute;PLATA</span> 12&times; ročně</span>
+          <span class="ticker__item"><span class="ticker__tag">DOBA</span> 5 let</span>
+          <span class="ticker__item"><span class="ticker__tag">OBJEM</span> 500&nbsp;mil. Kč</span>
+          <span class="ticker__item"><span class="ticker__tag">PORTFOLIO</span> 37&nbsp;679 parcel</span>
+          <span class="ticker__item"><span class="ticker__tag">PLOCHA</span> 16&nbsp;mil.+ m&sup2;</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Mapa portfolia — kraje ČR -->
+    <section class="map-sec" id="why">
+      <div class="map-sec__inner">
+
+        <header class="map-sec__head">
+          <span class="map-sec__eyebrow">Na&scaron;e z&aacute;ruka</span>
+          <h2 class="map-sec__title">
+            Důvěra postaven&aacute;<br>
+            na <span class="map-sec__title-bold">re&aacute;ln&eacute;m majetku</span>
+          </h2>
+          <p class="map-sec__sub">
+            Skupina VIAGEM ruč&iacute; za&nbsp;dluhopisy <strong>rozs&aacute;hl&yacute;m pozemkov&yacute;m
+              portfoliem nap&shy;ř&iacute;č ČR</strong> &mdash; ne abstraktn&iacute;mi z&aacute;rukami.
+          </p>
+        </header>
+
+        <div class="map-sec__layout">
+
+          <div class="map-sec__map-wrap">
+
+            <div class="map-cursor" id="mapCursor" aria-hidden="true">
+              <span class="map-cursor__ring"></span>
+              <span class="map-cursor__cross map-cursor__cross--h"></span>
+              <span class="map-cursor__cross map-cursor__cross--v"></span>
+              <span class="map-cursor__dot"></span>
+            </div>
+
+            <div class="map-popup" id="mapPopup" role="tooltip" aria-hidden="true">
+              <div class="map-popup__head">
+                <span class="map-popup__name" id="popupName">&mdash;</span>
+              </div>
+              <div class="map-popup__stats">
+                <div class="map-popup__stat">
+                  <span class="map-popup__stat-num" id="popupParcels">0</span>
+                  <span class="map-popup__stat-lbl">Parcel</span>
+                </div>
+                <div class="map-popup__stat">
+                  <span class="map-popup__stat-num" id="popupArea">0</span>
+                  <span class="map-popup__stat-lbl">Tis. m&sup2;</span>
+                </div>
+              </div>
+            </div>
+
+            <div id="czMapMount" class="map-sec__svg map-sec__svg-mount" data-src="assets/cz-regions.svg"></div>
+
+          </div>
+
+          <aside class="map-sec__totals">
+
+            <div class="stat">
+              <span class="stat__tag">01 Celkem</span>
+              <div class="stat__num">
+                <span data-counter="37679">0</span>
+              </div>
+              <div class="stat__lbl">Parcel v&nbsp;portfoliu napříč Českem</div>
+            </div>
+
+            <div class="stat">
+              <span class="stat__tag">02 Plocha</span>
+              <div class="stat__num">
+                <span data-counter="16">0</span><span class="stat__unit">+ mil. m&sup2;</span>
+              </div>
+              <div class="stat__lbl">Pozemky zemědělsk&eacute; půdy</div>
+            </div>
+
+            <div class="stat">
+              <span class="stat__tag">03 V&yacute;kupy</span>
+              <div class="stat__num">
+                <span data-counter="340">0</span>
+              </div>
+              <div class="stat__lbl">Průměrn&yacute; počet realizovan&yacute;ch v&yacute;kupů za&nbsp;rok</div>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Finanční ukazatele — čísla + graf tržeb -->
+    <section class="fin-sec" id="finance">
+      <div class="fin-sec__inner">
+
+        <header class="fin-head">
+          <div class="fin-head__left">
+            <h2 class="fin-head__title">
+              Růst, kter&yacute; <span class="fin-head__title-mark">lze změřit</span>
+            </h2>
+          </div>
+          <div class="fin-head__right">
+            <p class="fin-head__sub">
+              Auditované v&yacute;kazy skupiny VIAGEM. <strong>Stabiln&iacute; růst</strong>,
+              profitabilita a&nbsp;transparentn&iacute; hospodařen&iacute;.
+            </p>
+          </div>
+        </header>
+
+        <div class="bento" id="finChart">
+
+          <div class="bento__chart">
+            <span class="bento__corner bento__corner--tl"></span>
+            <span class="bento__corner bento__corner--tr"></span>
+            <span class="bento__corner bento__corner--bl"></span>
+            <span class="bento__corner bento__corner--br"></span>
+
+            <div class="finmin__chart-head">
+              <div>
+                <span class="finmin__chart-tag" id="chartTag">VLASTNÍ KAPITÁL</span>
+                <span class="finmin__chart-period">2022 — 2024 auditováno</span>
+              </div>
+              <div class="finmin__chart-readout">
+                <span class="finmin__readout-y" id="readoutY">2024</span>
+                <span class="finmin__readout-v" id="readoutV">478</span>
+                <span class="finmin__readout-u">mil. Kč</span>
+              </div>
+            </div>
+
+            <div class="finmin__chart" id="chartPlot">
+              <svg class="lc" viewBox="0 0 400 240" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="lcArea" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0%" stop-color="#b8941f" stop-opacity="0.28" />
+                    <stop offset="100%" stop-color="#b8941f" stop-opacity="0" />
+                  </linearGradient>
+                  <linearGradient id="lcStroke" x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="0%" stop-color="#8a6c0f" />
+                    <stop offset="50%" stop-color="#b8941f" />
+                    <stop offset="100%" stop-color="#d4b44a" />
+                  </linearGradient>
+                  <filter id="lcGlow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="3" result="blur" />
+                    <feMerge>
+                      <feMergeNode in="blur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <g class="lc__grid">
+                  <line x1="0" x2="400" y1="0" y2="0" />
+                  <line x1="0" x2="400" y1="60" y2="60" />
+                  <line x1="0" x2="400" y1="120" y2="120" />
+                  <line x1="0" x2="400" y1="180" y2="180" />
+                  <line x1="0" x2="400" y1="240" y2="240" />
+                </g>
+
+                <path class="lc__area-path" id="lcAreaPath" fill="url(#lcArea)" />
+                <path class="lc__line-glow" id="lcLineGlow" fill="none" stroke="url(#lcStroke)" stroke-width="6"
+                  stroke-linecap="round" stroke-linejoin="round" filter="url(#lcGlow)" />
+                <path class="lc__line-path" id="lcLinePath" fill="none" stroke="url(#lcStroke)" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+
+                <g id="lcPoints"></g>
+
+                <g class="lc__crosshair" id="lcCross">
+                  <line class="lc__ch-v" y1="0" y2="240" id="lcChV" />
+                  <line class="lc__ch-h" x1="0" x2="400" id="lcChH" />
+                </g>
+              </svg>
+
+              <div class="finmin__y-labels" id="lcY">
+                <span>500</span><span>375</span><span>250</span><span>125</span><span>0</span>
+              </div>
+
+              <div class="finmin__x-labels">
+                <span>2022</span><span>2023</span><span>2024</span>
+              </div>
+            </div>
+
+            <p class="finmin__source">Zdroj: Konsolidovan&aacute; v&yacute;ročn&iacute; zpr&aacute;va 2024 &middot;
+              auditovan&aacute; data skupiny VIAGEM</p>
+          </div>
+
+          <button class="bento__tile is-active" data-metric="capital" style="grid-area: cap">
+            <span class="bento__tile-name">Vlastní kapitál</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">478&nbsp;609</span><span
+                class="bento__tile-unit">tis. Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">k&nbsp;&uacute;noru 2026</span>
+              <span class="bento__tile-delta bento__tile-delta--up">+91&nbsp;%</span>
+            </span>
+          </button>
+          <button class="bento__tile" data-metric="ebitda" style="grid-area: ebitda">
+            <span class="bento__tile-name">EBITDA</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">152</span><span class="bento__tile-unit">mil.
+                Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">k 31.&nbsp;12.&nbsp;2024</span>
+              <span class="bento__tile-delta bento__tile-delta--up">+83&nbsp;%</span>
+            </span>
+          </button>
+          <button class="bento__tile" data-metric="portfolio" style="grid-area: portf">
+            <span class="bento__tile-name">Hodnota portfolia</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">1&nbsp;280</span><span
+                class="bento__tile-unit">mil. Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">k 31.&nbsp;12.&nbsp;2024</span>
+              <span class="bento__tile-delta bento__tile-delta--up">+51&nbsp;%</span>
+            </span>
+          </button>
+          <button class="bento__tile" data-metric="revenue" style="grid-area: revenue">
+            <span class="bento__tile-name">Tržby skupiny</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">326,66</span><span
+                class="bento__tile-unit">mil. Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">za rok 2024</span>
+              <span class="bento__tile-delta bento__tile-delta--up">+120&nbsp;%</span>
+            </span>
+          </button>
+
+          <div class="bento__tile bento__tile--static" style="grid-area: stat1">
+            <span class="bento__tile-name">Čistý zisk</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">169,9</span><span
+                class="bento__tile-unit">mil. Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">za rok 2024</span>
+            </span>
+          </div>
+          <div class="bento__tile bento__tile--static" style="grid-area: stat2">
+            <span class="bento__tile-name">Zadlužení skupiny</span>
+            <span class="bento__tile-value"><span class="bento__tile-num">87,8</span><span class="bento__tile-unit">mil.
+                Kč</span></span>
+            <span class="bento__tile-meta">
+              <span class="bento__tile-year">k 31.&nbsp;12.&nbsp;2024</span>
+            </span>
+          </div>
+
+        </div>
+
+
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — Calculator -->
+    <section class="calc-sec" id="calculator">
+      <div class="calc-sec__inner">
+
+        <header class="calc-head">
+          <span class="calc-head__eyebrow">Kalkulačka v&yacute;nosů</span>
+          <h2 class="calc-head__title">
+            Kolik <span class="calc-head__title-mark">vyděl&aacute;te</span>
+          </h2>
+          <p class="calc-head__sub">
+            Nastavte v&yacute;&scaron;i investice &mdash; okamžitě uvid&iacute;te svůj měs&iacute;čn&iacute;,
+            ročn&iacute; i&nbsp;celkov&yacute; v&yacute;nos za pět let při <strong>fixn&iacute; sazbě 7,1&nbsp;%
+              p.&nbsp;a.</strong>
+          </p>
+        </header>
+
+        <div class="calc-card">
+          <span class="calc-corner calc-corner--tl"></span>
+          <span class="calc-corner calc-corner--tr"></span>
+          <span class="calc-corner calc-corner--bl"></span>
+          <span class="calc-corner calc-corner--br"></span>
+
+          <div class="calc-input">
+            <span class="calc-input__label">V&yacute;&scaron;e investice</span>
+            <div class="calc-input__display">
+              <span class="calc-amount" id="calcAmount">500&nbsp;000</span>
+              <span class="calc-amount__unit">Kč</span>
+            </div>
+          </div>
+
+          <div class="calc-slider-wrap">
+            <input type="range" class="calc-slider" id="calcSlider" min="10000" max="5000000" step="10000"
+              value="500000" aria-label="V&yacute;&scaron;e investice">
+            <div class="calc-ticks" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="calc-range-labels">
+              <span>MIN &middot; 10&nbsp;000&nbsp;Kč</span>
+              <span>MAX &middot; 5&nbsp;000&nbsp;000&nbsp;Kč</span>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div class="calc-result">
+              <span class="calc-result__name">Měs&iacute;čn&iacute; v&yacute;nos</span>
+              <span class="calc-result__value">
+                <span class="calc-result__num" id="calcMonthly">2&nbsp;958</span>
+                <span class="calc-result__unit">Kč</span>
+              </span>
+            </div>
+            <div class="calc-result">
+              <span class="calc-result__name">Ročn&iacute; v&yacute;nos</span>
+              <span class="calc-result__value">
+                <span class="calc-result__num" id="calcYearly">35&nbsp;500</span>
+                <span class="calc-result__unit">Kč</span>
+              </span>
+            </div>
+            <div class="calc-result calc-result--total">
+              <span class="calc-result__name">Celkem za 5 let</span>
+              <span class="calc-result__value">
+                <span class="calc-result__num" id="calcTotal">177&nbsp;500</span>
+                <span class="calc-result__unit">Kč</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5 — Detail emise (parameters + documents) -->
+    <section class="emise-sec" id="emise">
+      <div class="emise-sec__inner">
+
+        <header class="emise-head">
+          <span class="emise-head__eyebrow">Dokumentace</span>
+          <h2 class="emise-head__title">
+            Detail emise <span class="emise-head__title-num">01</span>
+          </h2>
+        </header>
+
+        <div class="emise-legal">
+          <span class="emise-legal__corner emise-legal__corner--tl"></span>
+          <span class="emise-legal__corner emise-legal__corner--tr"></span>
+          <span class="emise-legal__corner emise-legal__corner--bl"></span>
+          <span class="emise-legal__corner emise-legal__corner--br"></span>
+          <span class="emise-legal__label">Informace</span>
+          <p class="emise-legal__txt">
+            Dne&nbsp;[•] vydala Česk&aacute; n&aacute;rodn&iacute; banka (ČNB) rozhodnut&iacute; č.&nbsp;j.&nbsp;[•],
+            kter&yacute;m schv&aacute;lila společnosti <strong>VIAGEM Investments&nbsp;a.s.</strong>
+            z&aacute;kladn&iacute; prospekt dluhopisů vyd&aacute;van&yacute;ch v&nbsp;r&aacute;mci dluhopisov&eacute;ho
+            programu z&nbsp;roku 2026 s&nbsp;dobou trv&aacute;n&iacute; <strong>5&nbsp;let</strong>
+            a&nbsp;maxim&aacute;ln&iacute;m objemem <strong>500&nbsp;000&nbsp;000&nbsp;Kč</strong>.
+          </p>
+        </div>
+
+        <dl class="emise-params">
+          <div class="emise-param">
+            <dt class="emise-param__label">Emitent</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val emise-param__val--gold">VIAGEM Investments&nbsp;a.s.</dd>
+          </div>
+          <div class="emise-param">
+            <dt class="emise-param__label">&Uacute;čel emise</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val">Financov&aacute;n&iacute; nemovitostn&iacute;ch aktivit</dd>
+          </div>
+          <div class="emise-param">
+            <dt class="emise-param__label">Nomin&aacute;ln&iacute; hodnota</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val">50&nbsp;000&nbsp;Kč</dd>
+          </div>
+          <div class="emise-param">
+            <dt class="emise-param__label">Celkov&yacute; hrub&yacute; v&yacute;nos</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val emise-param__val--gold">7,1&nbsp;% p.&nbsp;a.</dd>
+          </div>
+          <div class="emise-param">
+            <dt class="emise-param__label">V&yacute;plata v&yacute;nosu</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val">Měs&iacute;čně</dd>
+          </div>
+          <div class="emise-param">
+            <dt class="emise-param__label">ISIN / Měna</dt>
+            <span class="emise-param__dots" aria-hidden="true"></span>
+            <dd class="emise-param__val">CZ&hellip; / Koruna česk&aacute; (Kč)</dd>
+          </div>
+        </dl>
+
+        <div class="emise-docs">
+          <span class="emise-docs__label">Dokumenty</span>
+          <div class="emise-docs__grid">
+            <a class="emise-doc" href="#" target="_blank" rel="noopener">
+              <span class="emise-doc__type">PDF</span>
+              <span class="emise-doc__name">Zpr&aacute;va ke&nbsp;konsolidovan&eacute; z&aacute;věrce</span>
+              <span class="emise-doc__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="emise-doc" href="#" target="_blank" rel="noopener">
+              <span class="emise-doc__type">PDF</span>
+              <span class="emise-doc__name">V&yacute;ročn&iacute; zpr&aacute;va 2024</span>
+              <span class="emise-doc__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="emise-doc" href="#" target="_blank" rel="noopener">
+              <span class="emise-doc__type">PDF</span>
+              <span class="emise-doc__name">Auditorsk&aacute; zpr&aacute;va</span>
+              <span class="emise-doc__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="emise-doc" href="#" target="_blank" rel="noopener">
+              <span class="emise-doc__type">PDF</span>
+              <span class="emise-doc__name">Not&aacute;řsk&yacute; z&aacute;pis 2016</span>
+              <span class="emise-doc__arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="emise-doc" href="#" target="_blank" rel="noopener">
+              <span class="emise-doc__type">PDF</span>
+              <span class="emise-doc__name">Not&aacute;řsk&yacute; z&aacute;pis 2024</span>
+              <span class="emise-doc__arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 6 — Contact form -->
+    <section class="contact-sec" id="contact">
+      <div class="contact-sec__inner">
+
+        <div class="contact-grid">
+
+          <aside class="contact-info">
+            <span class="contact-info__eyebrow">Kontakt</span>
+            <h2 class="contact-info__title">
+              Začněte investovat <span class="contact-info__title-mark">je&scaron;tě dnes</span>
+            </h2>
+            <p class="contact-info__sub">
+              Vyplňte formul&aacute;ř a&nbsp;n&aacute;&scaron; investičn&iacute; specialista v&aacute;s bude kontaktovat
+              <strong>do&nbsp;24&nbsp;hodin</strong>.
+            </p>
+
+            <ul class="contact-meta">
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">Emitent</span>
+                <span class="contact-meta__val">VIAGEM Investment&nbsp;a.s.</span>
+              </li>
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">IČ</span>
+                <span class="contact-meta__val">24&nbsp;373&nbsp;478</span>
+              </li>
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">Regul&aacute;tor</span>
+                <span class="contact-meta__val">Schv&aacute;leno ČNB</span>
+              </li>
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">E-mail</span>
+                <a class="contact-meta__val contact-meta__val--link" href="mailto:info@viagem.cz">info@viagem.cz</a>
+              </li>
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">Telefon</span>
+                <a class="contact-meta__val contact-meta__val--link" href="tel:1200">1200</a>
+              </li>
+              <li class="contact-meta__row">
+                <span class="contact-meta__lbl">Adresa</span>
+                <span class="contact-meta__val">Sokolovsk&aacute; 131/86, Praha 8</span>
+              </li>
+            </ul>
+          </aside>
+
+          <div class="contact-form-wrap">
+            <span class="contact-form-wrap__corner contact-form-wrap__corner--tl"></span>
+            <span class="contact-form-wrap__corner contact-form-wrap__corner--tr"></span>
+            <span class="contact-form-wrap__corner contact-form-wrap__corner--bl"></span>
+            <span class="contact-form-wrap__corner contact-form-wrap__corner--br"></span>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="contact-form__row">
+                <label class="contact-field">
+                  <span class="contact-field__lbl">Jm&eacute;no a&nbsp;př&iacute;jmen&iacute; <span
+                      class="contact-field__req">*</span></span>
+                  <input class="contact-field__input" type="text" name="name" required>
+                </label>
+                <label class="contact-field">
+                  <span class="contact-field__lbl">E-mail <span class="contact-field__req">*</span></span>
+                  <input class="contact-field__input" type="email" name="email" required>
+                </label>
+              </div>
+
+              <div class="contact-form__row contact-form__row--3-1">
+                <label class="contact-field">
+                  <span class="contact-field__lbl">Telefon</span>
+                  <input class="contact-field__input" type="tel" name="phone" inputmode="tel" autocomplete="tel"
+                    pattern="[\d\s+()\-]{6,20}" title="Pouze čísla a znaky + ( ) -">
+                </label>
+                <label class="contact-field contact-field--year">
+                  <span class="contact-field__lbl">Jak&yacute; je rok? <span class="contact-field__req">*</span></span>
+                  <input class="contact-field__input" type="text" name="year" inputmode="numeric" pattern="[0-9]{4}"
+                    maxlength="4" autocomplete="off" required>
+                </label>
+              </div>
+
+              <div class="contact-field">
+                <span class="contact-field__lbl">Pl&aacute;novan&aacute; investice <span
+                    class="contact-field__req">*</span></span>
+                <div class="formdd" data-dropdown>
+                  <button type="button" class="formdd__btn" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="formdd__value" data-placeholder>Vyberte rozsah&hellip;</span>
+                    <span class="formdd__caret" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" width="12" height="12">
+                        <path d="M3.5 5.5L8 10l4.5-4.5" stroke="currentColor" stroke-width="1.6" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  </button>
+                  <ul class="formdd__menu" role="listbox" hidden>
+                    <li class="formdd__option" role="option" data-value="10-200">10&nbsp;000 — 200&nbsp;000&nbsp;Kč</li>
+                    <li class="formdd__option" role="option" data-value="200-500">200&nbsp;000 — 500&nbsp;000&nbsp;Kč
+                    </li>
+                    <li class="formdd__option" role="option" data-value="500-1m">500&nbsp;000 —
+                      1&nbsp;000&nbsp;000&nbsp;Kč</li>
+                    <li class="formdd__option" role="option" data-value="1m-2.5m">1&nbsp;000&nbsp;000 —
+                      2&nbsp;500&nbsp;000&nbsp;Kč</li>
+                    <li class="formdd__option" role="option" data-value="2.5m-5m">2&nbsp;500&nbsp;000 —
+                      5&nbsp;000&nbsp;000&nbsp;Kč</li>
+                  </ul>
+                  <input type="hidden" name="amount" required>
+                </div>
+              </div>
+
+              <label class="contact-field">
+                <span class="contact-field__lbl">Zpr&aacute;va <span
+                    class="contact-field__opt">(volitelně)</span></span>
+                <textarea class="contact-field__input contact-field__textarea" name="message" rows="4"></textarea>
+              </label>
+
+              <label class="contact-check">
+                <input type="checkbox" name="gdpr" required>
+                <span class="contact-check__box" aria-hidden="true"></span>
+                <span class="contact-check__txt">
+                  Souhlas&iacute;m se&nbsp;<a href="#">zpracov&aacute;n&iacute;m osobn&iacute;ch &uacute;dajů</a>
+                  dle&nbsp;GDPR za&nbsp;&uacute;čelem kontaktov&aacute;n&iacute;.
+                </span>
+              </label>
+
+              <button type="submit" class="contact-submit">
+                <span class="contact-submit__txt">Odeslat nez&aacute;vaznou popt&aacute;vku</span>
+                <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+                  <use href="assets/icons.svg#arrow-right" />
+                </svg>
+              </button>
+
+              <p class="contact-form__note">
+                Nez&aacute;vazn&aacute; popt&aacute;vka &middot; Odpov&iacute;d&aacute;me do&nbsp;24&nbsp;hodin
+              </p>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#contact" class="side-cta" id="sideCta">
+    <span class="side-cta__pill">
+      <span class="side-cta__shine" aria-hidden="true"></span>
+
+      <span class="side-cta__compact">
+        <span class="side-cta__icon">
+          <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true">
+            <use href="assets/icons.svg#arrow-right" />
+          </svg>
+        </span>
+        <span class="side-cta__vert">Kontakt</span>
+      </span>
+
+      <span class="side-cta__expanded">
+        <span class="side-cta__label">Kontaktovat n&aacute;s</span>
+        <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+          <use href="assets/icons.svg#arrow-right" />
+        </svg>
+      </span>
+    </span>
+  </a>
+
+  <div class="tooltip" id="tooltip" role="tooltip"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
